@@ -1,9 +1,11 @@
 {
   "name": "vue-plyr-simple",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "A Vue.js component that is a plyr video player.",
   "main": "dist/vue-plyr.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "poi build"
   },
