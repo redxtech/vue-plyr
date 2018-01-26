@@ -1,0 +1,22 @@
+{
+  "name": "vue-plyr-simple",
+  "version": "1.0.1",
+  "description": "A Vue.js component that is a plyr video player.",
+  "main": "dist/vue-plyr.js",
+  "files": ["dist"],
+  "scripts": {
+    "build": "poi build"
+  },
+  "author": "Gabe Dunn <gabe@redxtech.ca>",
+  "license": "MIT",
+  "dependencies": {
+    "plyr": "2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redxtech/vue-plyr"
+  },
+  "devDependencies": {
+    "poi": "^9.6.13"
+  }
+}
