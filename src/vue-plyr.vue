@@ -1,9 +1,13 @@
 <template>
-  <div class="plyr-container">
-    <video :id="`js-player-${this.idNumber}`" class="video" ref="video" :poster="this.poster">
-      <source :src="this.mp4"/>
-    </video>
-  </div>
+    <div class="plyr-container">
+        <video :id="`js-player-${this.idNumber}`" class="video" ref="video" :poster="this.poster">
+            <source v-for="(vid, index) in this.videos" :key="index" :src="vid.src" :type="`video/${vid.format}`"/>
+            <track
+                    v-if="this.subs" kind="captions" :label="this.subs.label"
+                    :src="this.subs.src" :srclang="this.subs.srclang" default
+            >
+        </video>
+    </div>
 </template>
 
 <script>
@@ -13,8 +17,31 @@
   export default {
     name: 'vue-plyr',
     props: {
-      poster: { type: String, required: true },
-      mp4: { type: String, required: true },
+      poster: {
+        type: String,
+        required: true
+      },
+      videos: {
+        type: Array,
+        required: true,
+        validator: value => {
+          let valid = true
+          value.forEach((vid) => {
+            let hasProps = vid.hasOwnProperty('src') && vid.hasOwnProperty('format')
+            if (!hasProps) {
+              valid = false
+            }
+          })
+          return valid
+        }
+      },
+      subs: {
+        type: Object,
+        required: false,
+        validator: value => {
+          return value.hasOwnProperty('label') && value.hasOwnProperty('src') && value.hasOwnProperty('srclang')
+        }
+      }
     },
     data () {
       return {
