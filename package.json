@@ -1,13 +1,13 @@
 {
-  "name": "vue-plyr-simple",
-  "version": "2.0.0",
+  "name": "vue-plyr",
+  "version": "1.0.0",
   "description": "A Vue.js component that is a plyr video player.",
   "main": "dist/vue-plyr.js",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "poi build"
+    "build": "bili"
   },
   "author": "Gabe Dunn <gabe@redxtech.ca>",
   "license": "MIT",
@@ -19,6 +19,11 @@
     "url": "git+https://github.com/redxtech/vue-plyr"
   },
   "devDependencies": {
-    "poi": "^9.6.13"
+    "bili": "^2.2.3",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-buble": "^0.18.0",
+    "rollup-plugin-postcss": "^1.2.7",
+    "rollup-plugin-vue": "^3.0.0",
+    "vue-template-compiler": "^2.5.13"
   }
 }
