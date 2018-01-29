@@ -3977,7 +3977,7 @@ var PlyrVideo = { render: function () {
       }
     },
     /** Object for subtitles track */
-    subs: {
+    subtitles: {
       type: Object,
       required: false,
       validator: function (value) {
