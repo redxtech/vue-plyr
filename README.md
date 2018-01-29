@@ -74,3 +74,10 @@ export default {
     }
 }
 ```
+
+In each of the elements you can pass an `options` prop which is an object that will be passed to the `plyr.setup()`
+function. Info on that [here](https://github.com/sampotts/plyr#options).
+
+## Author
+
+**plyr-vue** © [RedXTech](https://github.com/redxtech), Released under the [MIT](./LICENSE) License.

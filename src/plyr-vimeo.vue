@@ -9,6 +9,12 @@
     export default {
       name: 'plyr-vimeo',
       props: {
+        /** Options object for plyr config. */
+        options: {
+          type: Object,
+          required: false,
+          default () { return {} }
+        },
         /** Link or ID of vimeo video. */
         id: {
           type: String,
@@ -21,7 +27,7 @@
         }
       },
       mounted () {
-        this.player = plyr.setup(document.getElementById(`js-player-vimeo-${this.idNumber}`))[0]
+        this.player = plyr.setup(document.getElementById(`js-player-vimeo-${this.idNumber}`), this.options)[0]
       },
       beforeDestroy () {
         this.player.destroy()

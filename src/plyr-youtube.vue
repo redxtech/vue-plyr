@@ -9,6 +9,12 @@
   export default {
     name: 'plyr-youtube',
     props: {
+      /** Options object for plyr config. */
+      options: {
+        type: Object,
+        required: false,
+        default () { return {} }
+      },
       /** Link or ID of youtube video. */
       id: {
         type: String,
@@ -21,7 +27,7 @@
       }
     },
     mounted () {
-      this.player = plyr.setup(document.getElementById(`js-player-yt-${this.idNumber}`))[0]
+      this.player = plyr.setup(document.getElementById(`js-player-yt-${this.idNumber}`), this.options)[0]
     },
     beforeDestroy () {
       this.player.destroy()

@@ -3956,6 +3956,14 @@ var PlyrVideo = { render: function () {
   }, staticRenderFns: [],
   name: 'plyr-video',
   props: {
+    /** Options object for plyr config. */
+    options: {
+      type: Object,
+      required: false,
+      default: function default$1() {
+        return {};
+      }
+    },
     /** Link to poster to show when video hasn't played yet. */
     poster: {
       type: String,
@@ -3996,7 +4004,7 @@ var PlyrVideo = { render: function () {
     };
   },
   mounted: function mounted() {
-    this.player = plyr.setup(document.getElementById(("js-player-video-" + (this.idNumber))))[0];
+    this.player = plyr.setup(document.getElementById(("js-player-video-" + (this.idNumber))), this.options)[0];
   },
   beforeDestroy: function beforeDestroy() {
     this.player.destroy();
@@ -4013,6 +4021,14 @@ var PlyrYouTube = { render: function () {
   }, staticRenderFns: [],
   name: 'plyr-youtube',
   props: {
+    /** Options object for plyr config. */
+    options: {
+      type: Object,
+      required: false,
+      default: function default$1() {
+        return {};
+      }
+    },
     /** Link or ID of youtube video. */
     id: {
       type: String,
@@ -4025,7 +4041,7 @@ var PlyrYouTube = { render: function () {
     };
   },
   mounted: function mounted() {
-    this.player = plyr.setup(document.getElementById(("js-player-yt-" + (this.idNumber))))[0];
+    this.player = plyr.setup(document.getElementById(("js-player-yt-" + (this.idNumber))), this.options)[0];
   },
   beforeDestroy: function beforeDestroy() {
     this.player.destroy();
@@ -4042,6 +4058,14 @@ var PlyrVimeo = { render: function () {
   }, staticRenderFns: [],
   name: 'plyr-vimeo',
   props: {
+    /** Options object for plyr config. */
+    options: {
+      type: Object,
+      required: false,
+      default: function default$1() {
+        return {};
+      }
+    },
     /** Link or ID of vimeo video. */
     id: {
       type: String,
@@ -4054,7 +4078,7 @@ var PlyrVimeo = { render: function () {
     };
   },
   mounted: function mounted() {
-    this.player = plyr.setup(document.getElementById(("js-player-vimeo-" + (this.idNumber))))[0];
+    this.player = plyr.setup(document.getElementById(("js-player-vimeo-" + (this.idNumber))), this.options)[0];
   },
   beforeDestroy: function beforeDestroy() {
     this.player.destroy();
@@ -4073,6 +4097,14 @@ var PlyrAudio = { render: function () {
   }, staticRenderFns: [],
   name: 'plyr-audio',
   props: {
+    /** Options object for plyr config. */
+    options: {
+      type: Object,
+      required: false,
+      default: function default$1() {
+        return {};
+      }
+    },
     /** Array of audio tracks to include in the audio source. */
     tracks: {
       type: Array,
@@ -4095,7 +4127,7 @@ var PlyrAudio = { render: function () {
     };
   },
   mounted: function mounted() {
-    this.player = plyr.setup(document.getElementById(("js-player-audio-" + (this.idNumber))))[0];
+    this.player = plyr.setup(document.getElementById(("js-player-audio-" + (this.idNumber))), this.options)[0];
   },
   beforeDestroy: function beforeDestroy() {
     this.player.destroy();

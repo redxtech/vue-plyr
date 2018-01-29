@@ -11,6 +11,12 @@
   export default {
     name: 'plyr-audio',
     props: {
+      /** Options object for plyr config. */
+      options: {
+        type: Object,
+        required: false,
+        default () { return {} }
+      },
       /** Array of audio tracks to include in the audio source. */
       tracks: {
         type: Array,
@@ -33,7 +39,7 @@
       }
     },
     mounted () {
-      this.player = plyr.setup(document.getElementById(`js-player-audio-${this.idNumber}`))[0]
+      this.player = plyr.setup(document.getElementById(`js-player-audio-${this.idNumber}`), this.options)[0]
     },
     beforeDestroy () {
       this.player.destroy()

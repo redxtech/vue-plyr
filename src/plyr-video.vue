@@ -18,6 +18,12 @@
   export default {
     name: 'plyr-video',
     props: {
+      /** Options object for plyr config. */
+      options: {
+        type: Object,
+        required: false,
+        default () { return {} }
+      },
       /** Link to poster to show when video hasn't played yet. */
       poster: {
         type: String,
@@ -58,7 +64,7 @@
       }
     },
     mounted () {
-      this.player = plyr.setup(document.getElementById(`js-player-video-${this.idNumber}`))[0]
+      this.player = plyr.setup(document.getElementById(`js-player-video-${this.idNumber}`), this.options)[0]
     },
     beforeDestroy () {
       this.player.destroy()
