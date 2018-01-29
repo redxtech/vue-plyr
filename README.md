@@ -15,8 +15,8 @@ Include the script file, then use it in the app; e.g.:
 
 ```html
 <script type="text/javascript" src="https://unpkg.com/vue@latest"></script>
-<script type="text/javascript" src="https://unpkg.com/vue-plyr-simple@latest"></script>
-<script type="text/javascript" src="https://unpkg.com/vue-plyr-simple@latest/dist/vue-plyr.css"></script>
+<script type="text/javascript" src="https://unpkg.com/vue-plyr@latest"></script>
+<script type="text/javascript" src="https://unpkg.com/vue-plyr@latest/dist/vue-plyr.css"></script>
 ```
 
 ```js
