@@ -1,5 +1,5 @@
 <template>
-    <video :id="`js-player-${this.idNumber}`" class="video" ref="video" :poster="this.poster">
+    <video :id="`js-player-video-${this.idNumber}`" class="video" ref="video" :poster="this.poster">
         <source v-for="(vid, index) in this.videos" :key="index" :src="vid.src" :type="`video/${vid.format}`" />
         <track
                 v-if="this.subs" kind="captions" :label="this.subs.label"
@@ -36,7 +36,7 @@
         }
       },
       /** Object for subtitles track */
-      subs: {
+      subtitles: {
         type: Object,
         required: false,
         validator: value => {
@@ -50,7 +50,7 @@
       }
     },
     mounted () {
-      this.player = plyr.setup(document.getElementById(`js-player-${this.idNumber}`))[0]
+      this.player = plyr.setup(document.getElementById(`js-player-video-${this.idNumber}`))[0]
     },
     beforeDestroy () {
       this.player.destroy()
