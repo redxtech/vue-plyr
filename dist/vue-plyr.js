@@ -3950,9 +3950,9 @@ var plyr = createCommonjsModule(function (module) {
 });
 
 var PlyrVideo = { render: function () {
-    var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { staticClass: "plyr-container" }, [_c('video', { ref: "video", staticClass: "video", attrs: { "id": ("js-player-" + (this.idNumber)), "poster": this.poster } }, [_vm._l(this.videos, function (vid, index) {
+    var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('video', { ref: "video", staticClass: "video", attrs: { "id": ("js-player-" + (this.idNumber)), "poster": this.poster } }, [_vm._l(this.videos, function (vid, index) {
       return _c('source', { key: index, attrs: { "src": vid.src, "type": ("video/" + (vid.format)) } });
-    }), _vm._v(" "), this.subs ? _c('track', { attrs: { "kind": "captions", "label": this.subs.label, "src": this.subs.src, "srclang": this.subs.srclang, "default": "" } }) : _vm._e()], 2)]);
+    }), _vm._v(" "), this.subs ? _c('track', { attrs: { "kind": "captions", "label": this.subs.label, "src": this.subs.src, "srclang": this.subs.srclang, "default": "" } }) : _vm._e()], 2);
   }, staticRenderFns: [],
   name: 'plyr-video',
   props: {

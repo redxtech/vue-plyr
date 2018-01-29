@@ -1,13 +1,11 @@
 <template>
-    <div class="plyr-container">
-        <video :id="`js-player-${this.idNumber}`" class="video" ref="video" :poster="this.poster">
-            <source v-for="(vid, index) in this.videos" :key="index" :src="vid.src" :type="`video/${vid.format}`"/>
-            <track
-                    v-if="this.subs" kind="captions" :label="this.subs.label"
-                    :src="this.subs.src" :srclang="this.subs.srclang" default
-            >
-        </video>
-    </div>
+    <video :id="`js-player-${this.idNumber}`" class="video" ref="video" :poster="this.poster">
+        <source v-for="(vid, index) in this.videos" :key="index" :src="vid.src" :type="`video/${vid.format}`" />
+        <track
+                v-if="this.subs" kind="captions" :label="this.subs.label"
+                :src="this.subs.src" :srclang="this.subs.srclang" default
+        >
+    </video>
 </template>
 
 <script>
