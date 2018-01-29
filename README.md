@@ -1,5 +1,5 @@
 # vue-plyr
->A Vue.js component that is a plyr video player.
+>A set of Vue components for the plyr video & audio player.
 
 This is useful for when you want a nice video player in your Vue app.
 

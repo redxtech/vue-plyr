@@ -15,12 +15,14 @@
   import 'plyr/dist/plyr.css'
 
   export default {
-    name: 'vue-plyr',
+    name: 'plyr-video',
     props: {
+      /** Link to poster to show when video hasn't played yet. */
       poster: {
         type: String,
         required: true
       },
+      /** Array of videos to include in the video source. */
       videos: {
         type: Array,
         required: true,
@@ -35,6 +37,7 @@
           return valid
         }
       },
+      /** Object for subtitles track */
       subs: {
         type: Object,
         required: false,

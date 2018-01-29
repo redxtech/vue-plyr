@@ -5,17 +5,19 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 var plyr = _interopDefault(require('plyr'));
 require('plyr/dist/plyr.css');
 
-var Component = { render: function () {
-    var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { staticClass: "plyr-container" }, [_c('video', { ref: "video", staticClass: "video", attrs: { "id": ("js-player-" + (this.idNumber)), "poster": this.poster, "preload": "auto" } }, [_vm._l(this.videos, function (vid, index) {
+var PlyrVideo = { render: function () {
+    var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { staticClass: "plyr-container" }, [_c('video', { ref: "video", staticClass: "video", attrs: { "id": ("js-player-" + (this.idNumber)), "poster": this.poster } }, [_vm._l(this.videos, function (vid, index) {
       return _c('source', { key: index, attrs: { "src": vid.src, "type": ("video/" + (vid.format)) } });
     }), _vm._v(" "), this.subs ? _c('track', { attrs: { "kind": "captions", "label": this.subs.label, "src": this.subs.src, "srclang": this.subs.srclang, "default": "" } }) : _vm._e()], 2)]);
   }, staticRenderFns: [],
-  name: 'vue-plyr',
+  name: 'plyr-video',
   props: {
+    /** Link to poster to show when video hasn't played yet. */
     poster: {
       type: String,
       required: true
     },
+    /** Array of videos to include in the video source. */
     videos: {
       type: Array,
       required: true,
@@ -30,6 +32,7 @@ var Component = { render: function () {
         return valid;
       }
     },
+    /** Object for subtitles track */
     subs: {
       type: Object,
       required: false,
@@ -56,6 +59,70 @@ var Component = { render: function () {
   }
 };
 
-var index = (function (Vue) { return Vue.component(Component.name, Component); });
+var PlyrYouTube = { render: function () {
+    var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { class: ("js-player-yt-" + (this.idNumber)), attrs: { "data-type": "youtube", "data-video-id": this.id } });
+  }, staticRenderFns: [],
+  name: 'plyr-youtube',
+  props: {
+    /** Link or ID of youtube video. */
+    id: {
+      type: String,
+      required: true
+    }
+  },
+  data: function data() {
+    return {
+      player: {}
+    };
+  },
+  mounted: function mounted() {
+    this.player = plyr.setup(document.getElementById(("js-player-yt-" + (this.idNumber))))[0];
+  },
+  beforeDestroy: function beforeDestroy() {
+    this.player.destroy();
+  },
+  computed: {
+    idNumber: function idNumber() {
+      return Math.floor(Math.random() * (100000 - 1)) + 1;
+    }
+  }
+};
+
+var PlyrVimeo = { render: function () {
+    var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { class: ("js-player-vimeo-" + (this.idNumber)), attrs: { "data-type": "vimeo", "data-video-id": this.id } });
+  }, staticRenderFns: [],
+  name: 'plyr-vimeo',
+  props: {
+    /** Link or ID of vimeo video. */
+    id: {
+      type: String,
+      required: true
+    }
+  },
+  data: function data() {
+    return {
+      player: {}
+    };
+  },
+  mounted: function mounted() {
+    this.player = plyr.setup(document.getElementById(("js-player-vimeo-" + (this.idNumber))))[0];
+  },
+  beforeDestroy: function beforeDestroy() {
+    this.player.destroy();
+  },
+  computed: {
+    idNumber: function idNumber() {
+      return Math.floor(Math.random() * (100000 - 1)) + 1;
+    }
+  }
+};
+
+var Components = [PlyrVideo, PlyrYouTube, PlyrVimeo];
+
+var index = (function (Vue) {
+  Components.forEach(function (Component) {
+    Vue.component(Component.name, Component);
+  });
+});
 
 module.exports = index;
