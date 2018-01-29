@@ -35,7 +35,7 @@ Vue.use(VuePlyr)
 Once installed, it can be used in a template as simply as:
 
 ```html
-<plyr-video poster="path/to/poster.png" :videos="this.videos" :subtitles="this.subtitles" />
+<plyr-video poster="path/to/poster.png" :videos="this.videos" :subtitles="this.subtitles" :crossorigin="true" />
 <plyr-audio :tracks="this.tracks" />
 <plyr-youtube :id="this.youtubeID" />
 <plyr-vimeo :id="this.vimeoID" />

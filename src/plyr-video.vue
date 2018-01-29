@@ -1,6 +1,9 @@
 <template>
-    <video :id="`js-player-video-${this.idNumber}`" class="video" ref="video" :poster="this.poster">
-        <source v-for="(vid, index) in this.videos" :key="index" :src="vid.src" :type="`video/${vid.format}`" />
+    <video
+            :id="`js-player-video-${this.idNumber}`" class="video" ref="video"
+            :poster="this.poster" :crossorigin="this.crossorigin"
+    >
+        <source v-for="(vid, index) in this.videos" :key="index" :src="vid.src" :type="`video/${vid.format}`"/>
         <track
                 v-if="this.subtitles" kind="captions" :label="this.subtitles.label"
                 :src="this.subtitles.src" :srclang="this.subtitles.srclang" default
@@ -35,13 +38,18 @@
           return valid
         }
       },
-      /** Object for subtitles track */
+      /** Object for subtitles track. */
       subtitles: {
         type: Object,
         required: false,
         validator: value => {
           return value.hasOwnProperty('label') && value.hasOwnProperty('src') && value.hasOwnProperty('srclang')
         }
+      },
+      /** Boolean for whether to put crossorigin attribute on the video element. */
+      crossorigin: {
+        type: Boolean,
+        required: false
       }
     },
     data () {

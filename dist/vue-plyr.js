@@ -3950,7 +3950,7 @@ var plyr = createCommonjsModule(function (module) {
 });
 
 var PlyrVideo = { render: function () {
-    var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('video', { ref: "video", staticClass: "video", attrs: { "id": ("js-player-video-" + (this.idNumber)), "poster": this.poster } }, [_vm._l(this.videos, function (vid, index) {
+    var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('video', { ref: "video", staticClass: "video", attrs: { "id": ("js-player-video-" + (this.idNumber)), "poster": this.poster, "crossorigin": this.crossorigin } }, [_vm._l(this.videos, function (vid, index) {
       return _c('source', { key: index, attrs: { "src": vid.src, "type": ("video/" + (vid.format)) } });
     }), _vm._v(" "), this.subtitles ? _c('track', { attrs: { "kind": "captions", "label": this.subtitles.label, "src": this.subtitles.src, "srclang": this.subtitles.srclang, "default": "" } }) : _vm._e()], 2);
   }, staticRenderFns: [],
@@ -3976,13 +3976,18 @@ var PlyrVideo = { render: function () {
         return valid;
       }
     },
-    /** Object for subtitles track */
+    /** Object for subtitles track. */
     subtitles: {
       type: Object,
       required: false,
       validator: function (value) {
         return value.hasOwnProperty('label') && value.hasOwnProperty('src') && value.hasOwnProperty('srclang');
       }
+    },
+    /** Boolean for whether to put crossorigin attribute on the video element. */
+    crossorigin: {
+      type: Boolean,
+      required: false
     }
   },
   data: function data() {
