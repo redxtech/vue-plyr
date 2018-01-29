@@ -1,5 +1,5 @@
 <template>
-    <div :class="`js-player-vimeo-${this.idNumber}`" data-type="vimeo" :data-video-id="this.id"></div>
+    <div :id="`js-player-vimeo-${this.idNumber}`" data-type="vimeo" :data-video-id="this.id"></div>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-    <div :class="`js-player-yt-${this.idNumber}`" data-type="youtube" :data-video-id="this.id"></div>
+    <div :id="`js-player-yt-${this.idNumber}`" data-type="youtube" :data-video-id="this.id"></div>
 </template>
 
 <script>

@@ -73,7 +73,7 @@ var PlyrVideo = { render: function () {
 };
 
 var PlyrYouTube = { render: function () {
-    var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { class: ("js-player-yt-" + (this.idNumber)), attrs: { "data-type": "youtube", "data-video-id": this.id } });
+    var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { attrs: { "id": ("js-player-yt-" + (this.idNumber)), "data-type": "youtube", "data-video-id": this.id } });
   }, staticRenderFns: [],
   name: 'plyr-youtube',
   props: {
@@ -110,7 +110,7 @@ var PlyrYouTube = { render: function () {
 };
 
 var PlyrVimeo = { render: function () {
-    var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { class: ("js-player-vimeo-" + (this.idNumber)), attrs: { "data-type": "vimeo", "data-video-id": this.id } });
+    var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { attrs: { "id": ("js-player-vimeo-" + (this.idNumber)), "data-type": "vimeo", "data-video-id": this.id } });
   }, staticRenderFns: [],
   name: 'plyr-vimeo',
   props: {
