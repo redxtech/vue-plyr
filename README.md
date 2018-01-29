@@ -48,7 +48,7 @@ export default {
             videos: [
                 { src: 'path/to/video.mp4', format: 'mp4' },
                 { src: 'path/to/video.webm', format: 'webm' }
-            ]
+            ],
 
             // Object with subtitles label, source, and language.
             subtitles: {
@@ -65,7 +65,7 @@ export default {
 
             // YouTube video ID or video URL.
             // https://www.youtube.com/watch?v=bTqVqk7FSmY & https://youtu.be/bTqVqk7FSmY would have the same effect.
-            youtubeID: 'bTqVqk7FSmY'
+            youtubeID: 'bTqVqk7FSmY',
 
             // Vimeo video ID or video URL.
             // https://vimeo.com/147865858 would have the same effect.

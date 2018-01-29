@@ -2,8 +2,8 @@
     <video :id="`js-player-video-${this.idNumber}`" class="video" ref="video" :poster="this.poster">
         <source v-for="(vid, index) in this.videos" :key="index" :src="vid.src" :type="`video/${vid.format}`" />
         <track
-                v-if="this.subs" kind="captions" :label="this.subs.label"
-                :src="this.subs.src" :srclang="this.subs.srclang" default
+                v-if="this.subtitles" kind="captions" :label="this.subtitles.label"
+                :src="this.subtitles.src" :srclang="this.subtitles.srclang" default
         >
     </video>
 </template>
