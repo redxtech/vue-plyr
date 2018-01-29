@@ -117,7 +117,48 @@ var PlyrVimeo = { render: function () {
   }
 };
 
-var Components = [PlyrVideo, PlyrYouTube, PlyrVimeo];
+var PlyrAudio = { render: function () {
+    var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('audio', { ref: "audio", attrs: { "id": ("js-player-audio-" + (this.idNumber)) } }, _vm._l(this.tracks, function (track, index) {
+      return _c('source', { key: index, attrs: { "src": track.src, "type": ("audio/" + (track.format)) } });
+    }));
+  }, staticRenderFns: [],
+  name: 'plyr-audio',
+  props: {
+    /** Array of audio tracks to include in the audio source. */
+    tracks: {
+      type: Array,
+      required: true,
+      validator: function (value) {
+        var valid = true;
+        value.forEach(function (vid) {
+          var hasProps = vid.hasOwnProperty('src') && vid.hasOwnProperty('format');
+          if (!hasProps) {
+            valid = false;
+          }
+        });
+        return valid;
+      }
+    }
+  },
+  data: function data() {
+    return {
+      player: {}
+    };
+  },
+  mounted: function mounted() {
+    this.player = plyr.setup(document.getElementById(("js-player-audio-" + (this.idNumber))))[0];
+  },
+  beforeDestroy: function beforeDestroy() {
+    this.player.destroy();
+  },
+  computed: {
+    idNumber: function idNumber() {
+      return Math.floor(Math.random() * (100000 - 1)) + 1;
+    }
+  }
+};
+
+var Components = [PlyrVideo, PlyrYouTube, PlyrVimeo, PlyrAudio];
 
 var index = (function (Vue) {
   Components.forEach(function (Component) {
