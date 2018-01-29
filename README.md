@@ -27,6 +27,7 @@ Vue.use(VuePlyr)
 
 ```js
 import VuePlyr from 'vue-plyr';
+import 'vue-plyr/dist/vue-plyr.css';
 Vue.use(VuePlyr)
 ```
 
