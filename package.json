@@ -2,7 +2,10 @@
   "name": "vue-plyr",
   "version": "2.0.0-beta.3.0.5",
   "description": "A set of Vue components for the plyr video & audio player.",
+  "keywords": ["vue", "plyr", "video", "audio", "youtube", "vimeo", "media", "player", "js", "javascript", "bili"],
   "main": "dist/vue-plyr.js",
+  "module": "dist/vue-plyr.es.js",
+  "jsnext:main": "dist/vue-plyr.es.js",
   "files": [
     "dist"
   ],
@@ -11,10 +14,7 @@
   },
   "author": "Gabe Dunn <gabe@redxtech.ca>",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/redxtech/vue-plyr"
-  },
+  "repository": "github:redxtech/vue-plyr",
   "dependencies": {
     "plyr": "2"
   },

@@ -1,7 +1,7 @@
 module.exports = {
   input: "src/index.js",
   outDir: 'dist',
-  format: ['cjs', 'umd'],
+  format: ['cjs', 'es', 'umd'],
   moduleName: 'VuePlyr',
   js: 'buble',
   postcss: {
