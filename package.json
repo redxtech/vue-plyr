@@ -11,12 +11,12 @@
   },
   "author": "Gabe Dunn <gabe@redxtech.ca>",
   "license": "MIT",
-  "dependencies": {
-    "plyr": "2"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/redxtech/vue-plyr"
+  },
+  "dependencies": {
+    "plyr": "2"
   },
   "devDependencies": {
     "bili": "^2.2.3",
