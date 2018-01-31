@@ -10,3 +10,10 @@ export default Vue => {
     Vue.component(Component.name, Component)
   })
 }
+
+export {
+  PlyrVideo,
+  PlyrAudio,
+  PlyrYouTube,
+  PlyrVimeo
+}
