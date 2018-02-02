@@ -3,7 +3,9 @@ import PlyrYouTube from './plyr-youtube.vue'
 import PlyrVimeo from './plyr-vimeo.vue'
 import PlyrAudio from './plyr-audio.vue'
 
-const Components = [PlyrVideo, PlyrYouTube, PlyrVimeo, PlyrAudio]
+import PlyrVideoSlot from './plyr-video-slot.vue'
+
+const Components = [PlyrVideo, PlyrYouTube, PlyrVimeo, PlyrAudio, PlyrVideoSlot]
 
 export default Vue => {
   Components.forEach((Component) => {
@@ -15,5 +17,6 @@ export {
   PlyrVideo,
   PlyrAudio,
   PlyrYouTube,
-  PlyrVimeo
+  PlyrVimeo,
+  PlyrVideoSlot
 }
