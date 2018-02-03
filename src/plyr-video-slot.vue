@@ -68,7 +68,7 @@
       }
     },
     mounted () {
-      if (this.$slots.$default) {
+      if (this.$slots.default) {
         this.player = plyr.setup(document.getElementById(`plyr-video-container-${this.idNumber}`).childNodes[0],
           this.options)[0]
       } else {
