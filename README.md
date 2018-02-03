@@ -30,6 +30,17 @@ import VuePlyr from 'vue-plyr';
 import 'vue-plyr/dist/vue-plyr.css';
 Vue.use(VuePlyr)
 ```
+#### Or
+```js
+import { PlyrVideo } from 'vue-plyr'
+import 'vue-plyr/dist/vue-plyr.css'
+
+export default {
+    components: {
+        PlyrVideo
+    }
+}
+```
 
 ## Usage
 
@@ -40,6 +51,26 @@ Once installed, it can be used in a template as simply as:
 <plyr-audio :tracks="this.tracks" />
 <plyr-youtube :id="this.youtubeID" />
 <plyr-vimeo :id="this.vimeoID" />
+<!-- You can also just wrap a video, audio, youtube api, or vimeo api block with the <plyr> component -->
+<plyr>
+    <video>
+        <source src="video.mp4" type="video/mp4" />
+        <source src="video.ogg" type="video/ogg" />
+    </video>
+</plyr>
+<plyr>
+    <audio>
+        <source src="audio.mp3" type="audio/mp3" />
+        <source src="audio.ogg" type="audio/ogg" />
+    </audio>
+</plyr>
+<plyr>
+    <div data-type="youtube" data-video-id="bTqVqk7FSmY" />
+</plyr>
+<plyr>
+    <div data-type="vimeo" data-video-id="147865858" />
+</plyr>
+
 ```
 ```js
 export default {
@@ -81,4 +112,4 @@ function. Info on that [here](https://github.com/sampotts/plyr#options).
 
 ## Author
 
-**plyr-vue** © [RedXTech](https://github.com/redxtech), Released under the [MIT](./LICENSE) License.
+**plyr-vue** © [RedXTech](https://github.com/redxtech), Released under the [MIT](./LICENSE.md) License.
