@@ -1,3 +1,4 @@
 .idea
-node_modules
-yarn.lock
+test
+src
+bili.config.js
