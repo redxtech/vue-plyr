@@ -72,12 +72,12 @@
     mounted () {
       this.player = plyr.setup(document.getElementById(`js-player-video-${this.idNumber}`), this.options)[0]
       this.emit.forEach(element => {
-        this.player.on(element,this.emitPlayerEvent)
+        this.player.on(element, this.emitPlayerEvent)
       })
     },
     methods: {
       emitPlayerEvent() {
-        this.$emit(event.type,event)
+        this.$emit(event.type, event)
       } 
     }, 
     beforeDestroy () {
