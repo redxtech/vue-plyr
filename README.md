@@ -107,6 +107,11 @@ export default {
 }
 ```
 
+If you want to have events from the plyr instance emitted back to a parent component, just pass an array of the events you want emitted.  Valid events are [here](https://github.com/sampotts/plyr#events).
+```html
+<plyr :emit="['timeupdate','exitfullscreen']" @timeupdate="videoTimeUpdated" @exitfullscreen="exitedFullScreen">
+```
+
 In each of the elements you can pass an `options` prop which is an object that will be passed to the `plyr.setup()`
 function. Info on that [here](https://github.com/sampotts/plyr#options).
 
