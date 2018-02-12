@@ -1,7 +1,15 @@
 <template>
-    <audio :id="`js-player-audio-${this.idNumber}`" ref="audio">
-        <source v-for="(track, index) in this.tracks" :key="index" :src="track.src" :type="`audio/${track.format}`" />
-    </audio>
+  <audio
+    :id="`js-player-audio-${idNumber}`"
+    ref="audio"
+  >
+    <source
+      v-for="(track, index) in tracks"
+      :key="index"
+      :src="track.src"
+      :type="`audio/${track.format}`"
+    >
+  </audio>
 </template>
 
 <script>
@@ -9,7 +17,7 @@
   import 'plyr/dist/plyr.css'
 
   export default {
-    name: 'plyr-audio',
+    name: 'PlyrAudio',
     props: {
       /** Options object for plyr config. */
       options: {
@@ -38,16 +46,16 @@
         player: {}
       }
     },
+    computed: {
+      idNumber () {
+        return Math.floor(Math.random() * (100000 - 1)) + 1
+      }
+    },
     mounted () {
       this.player = plyr.setup(document.getElementById(`js-player-audio-${this.idNumber}`), this.options)[0]
     },
     beforeDestroy () {
       this.player.destroy()
-    },
-    computed: {
-      idNumber () {
-        return Math.floor(Math.random() * (100000 - 1)) + 1
-      }
     }
   }
 </script>

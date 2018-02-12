@@ -75,11 +75,13 @@ describe('PlyrVideo', () => {
 
   it('has proper track data', () => {
     wrapper.setProps({
-      subtitles: {
-        label: 'English Subs',
-        src: 'subtitles.vtt',
-        srclang: 'en'
-      }
+      subtitles: [
+        {
+          label: 'English Subs',
+          src: 'subtitles.vtt',
+          srclang: 'en',
+          default: true
+        }]
     })
     const track = wrapper.find('video').find('track')
     expect(track.attributes().label).toBe('English Subs')
