@@ -10,6 +10,8 @@
   ],
   "scripts": {
     "build": "bili",
+    "lint": "eslint --ext .js,.vue src",
+    "lint:fix": "eslint --ext .js,.vue src --fix",
     "test": "mocha-webpack --webpack-config test/webpack/webpack.test.conf.js -r test/setup.js test/**/*.spec.js",
     "test:nyan": "mocha-webpack --webpack-config test/webpack/webpack.test.conf.js -r test/setup.js test/**/*.spec.js -R nyan",
     "test:watch": "mocha-webpack --webpack-config test/webpack/webpack.test.conf.js -r test/setup.js test/**/*.spec.js -w"
@@ -41,6 +43,13 @@
     "@vue/test-utils": "^1.0.0-beta.11",
     "bili": "^2.2.3",
     "css-loader": "^0.28.9",
+    "eslint": "^4.17.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^6.0.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-vue": "^4.2.2",
     "expect": "^22.1.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "jsdom": "^11.6.2",
