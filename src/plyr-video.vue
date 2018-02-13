@@ -59,7 +59,7 @@
       },
       /** Object for subtitles track. */
       subtitles: {
-        type: Object,
+        type: Array,
         required: false,
         default: () => [],
         validator: value => {
