@@ -11,6 +11,7 @@ module.exports = {
     'plugin:vue/recommended'
   ],
   rules: {
+    'object-curly-spacing': ['error', 'always'],
     indent: 0,
     'indent-legacy': ['error', 2]
   }
