@@ -16,6 +16,12 @@
         type: Object,
         required: false,
         default () { return {} }
+      },
+      /** Array of events to emit from the plyr object */
+      emit: {
+        type: Array,
+        required: false,
+        default () { return [] }
       }
     },
     data () {
@@ -31,9 +37,17 @@
     mounted () {
       this.player = plyr.setup(document.getElementById(`plyr-container-${this.idNumber}`),
         this.options)[0]
+      this.emit.forEach(element => {
+        this.player.on(element, this.emitPlayerEvent)
+      })
     },
     beforeDestroy () {
       this.player.destroy()
+    },
+    methods: {
+      emitPlayerEvent () {
+        this.$emit(event.type, event)
+      }
     }
   }
 </script>
