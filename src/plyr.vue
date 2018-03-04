@@ -1,7 +1,7 @@
 <template>
-    <div :id="`plyr-container-${this.idNumber}`">
-        <slot/>
-    </div>
+  <div :id="`plyr-container-${idNumber}`">
+    <slot/>
+  </div>
 </template>
 
 <script>
@@ -9,7 +9,7 @@
   import 'plyr/dist/plyr.css'
 
   export default {
-    name: 'plyr',
+    name: 'Plyr',
     props: {
       /** Options object for plyr config. */
       options: {
@@ -19,14 +19,19 @@
       },
       /** Array of events to emit from the plyr object */
       emit: {
-          type: Array,
-          required: false,
-          default () { return [] }
+        type: Array,
+        required: false,
+        default () { return [] }
       }
     },
     data () {
       return {
         player: {}
+      }
+    },
+    computed: {
+      idNumber () {
+        return Math.floor(Math.random() * (100000 - 1)) + 1
       }
     },
     mounted () {
@@ -36,17 +41,12 @@
         this.player.on(element, this.emitPlayerEvent)
       })
     },
-    methods: {
-      emitPlayerEvent() {
-        this.$emit(event.type, event)
-      } 
-    }, 
     beforeDestroy () {
       this.player.destroy()
     },
-    computed: {
-      idNumber () {
-        return Math.floor(Math.random() * (100000 - 1)) + 1
+    methods: {
+      emitPlayerEvent () {
+        this.$emit(event.type, event)
       }
     }
   }

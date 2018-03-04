@@ -1,14 +1,27 @@
 <template>
-    <video
-            :id="`js-player-video-${this.idNumber}`" class="video" ref="video"
-            :poster="this.poster" :crossorigin="this.crossorigin"
+  <video
+    :id="`js-player-video-${idNumber}`"
+    class="video"
+    ref="video"
+    :poster="poster"
+    :crossorigin="crossorigin"
+  >
+    <source
+      v-for="(vid, index) in videos"
+      :key="index"
+      :src="vid.src"
+      :type="`video/${vid.format}`"
     >
-        <source v-for="(vid, index) in this.videos" :key="index" :src="vid.src" :type="`video/${vid.format}`"/>
-        <track
-                v-if="this.subtitles" kind="captions" :label="this.subtitles.label"
-                :src="this.subtitles.src" :srclang="this.subtitles.srclang" default
-        >
-    </video>
+    <track
+      v-for="subtitle in subtitles"
+      :key="subtitle.src"
+      kind="captions"
+      :label="subtitle.label"
+      :src="subtitle.src"
+      :srclang="subtitle.srclang"
+      :default="subtitle.default"
+    >
+  </video>
 </template>
 
 <script>
@@ -16,7 +29,7 @@
   import 'plyr/dist/plyr.css'
 
   export default {
-    name: 'plyr-video',
+    name: 'PlyrVideo',
     props: {
       /** Options object for plyr config. */
       options: {
@@ -26,10 +39,10 @@
       },
       /** Array of events to emit from the plyr object */
       emit: {
-          type: Array,
-          required: false,
-          default () { return [] }
-        },
+        type: Array,
+        required: false,
+        default () { return [] }
+      },
       /** Link to poster to show when video hasn't played yet. */
       poster: {
         type: String,
@@ -52,21 +65,35 @@
       },
       /** Object for subtitles track. */
       subtitles: {
-        type: Object,
+        type: Array,
         required: false,
+        default: () => [],
         validator: value => {
-          return value.hasOwnProperty('label') && value.hasOwnProperty('src') && value.hasOwnProperty('srclang')
+          let valid = true
+          value.forEach((track) => {
+            let hasProps = track.hasOwnProperty('label') && track.hasOwnProperty('src') &&
+              track.hasOwnProperty('srclang')
+            if (!hasProps) {
+              valid = false
+            }
+          })
+          return valid
         }
       },
       /** Boolean for whether to put crossorigin attribute on the video element. */
       crossorigin: {
         type: Boolean,
-        required: false
+        default: false
       }
     },
     data () {
       return {
         player: {}
+      }
+    },
+    computed: {
+      idNumber () {
+        return Math.floor(Math.random() * (100000 - 1)) + 1
       }
     },
     mounted () {
@@ -75,17 +102,12 @@
         this.player.on(element, this.emitPlayerEvent)
       })
     },
-    methods: {
-      emitPlayerEvent() {
-        this.$emit(event.type, event)
-      } 
-    }, 
     beforeDestroy () {
       this.player.destroy()
     },
-    computed: {
-      idNumber () {
-        return Math.floor(Math.random() * (100000 - 1)) + 1
+    methods: {
+      emitPlayerEvent () {
+        this.$emit(event.type, event)
       }
     }
   }

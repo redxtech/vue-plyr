@@ -16,7 +16,7 @@ Include the script file, then use it in the app; e.g.:
 ```html
 <script type="text/javascript" src="https://unpkg.com/vue@latest"></script>
 <script type="text/javascript" src="https://unpkg.com/vue-plyr@latest"></script>
-<script type="text/javascript" src="https://unpkg.com/vue-plyr@latest/dist/vue-plyr.css"></script>
+<link rel="stylesheet" href="https://unpkg.com/vue-plyr@latest/dist/vue-plyr.css">
 ```
 
 ```js
@@ -47,11 +47,9 @@ export default {
 Once installed, it can be used in a template as simply as:
 
 ```html
-<plyr-video poster="path/to/poster.png" :videos="this.videos" :subtitles="this.subtitles" :crossorigin="true" />
-<plyr-audio :tracks="this.tracks" />
-<plyr-youtube :id="this.youtubeID" />
-<plyr-vimeo :id="this.vimeoID" />
-<!-- You can also just wrap a video, audio, youtube api, or vimeo api block with the <plyr> component -->
+<!-- The preferred way to apply the component is by wrapping it with -->
+<!-- the <plyr> tag. It has a lot more flexibility as you are able -->
+<!-- to manage your element directly. -->
 <plyr>
     <video>
         <source src="video.mp4" type="video/mp4" />
@@ -70,6 +68,14 @@ Once installed, it can be used in a template as simply as:
 <plyr>
     <div data-type="vimeo" data-video-id="147865858" />
 </plyr>
+
+<!-- You can also use the specific component and pass the necessary -->
+<!-- data through the props. This way is not recommended, and will -->
+<!-- probably be deprecated at some point. -->
+<plyr-video poster="path/to/poster.png" :videos="this.videos" :subtitles="this.subtitles" :crossorigin="true" />
+<plyr-audio :tracks="this.tracks" />
+<plyr-youtube :id="this.youtubeID" />
+<plyr-vimeo :id="this.vimeoID" />
 
 ```
 ```js
