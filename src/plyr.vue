@@ -46,7 +46,7 @@
       this.player.destroy()
     },
     methods: {
-      emitPlayerEvent () {
+      emitPlayerEvent (event) {
         this.$emit(event.type, event)
       }
     }
