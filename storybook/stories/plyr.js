@@ -54,4 +54,11 @@ storiesOf('Plyr', module).
     template: `<div style="width:1200px;height:675px"><plyr>
       <div data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY"></div>
     </plyr></div>`
+  })).
+  add('Youtube (PE)', () => ({
+    components: {Plyr},
+    template: `<div style="width:1200px;height:675px"><plyr>
+      <div class="plyr__video-embed">
+      <iframe src="https://www.youtube.com/embed/bTqVqk7FSmY" allowfullscreen allowtransparency allow="autoplay"></iframe></div>
+    </plyr></div>`
   }))

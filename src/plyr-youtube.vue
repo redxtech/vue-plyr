@@ -1,5 +1,15 @@
 <template>
   <div
+    v-if="pe"
+    class="plyr__youtube-embed"
+    :id="`js-player-yt-${idNumber}`"
+  >
+    <iframe
+      :src="`https://www.youtube.com/embed/${id}`"
+      allowfullscreen allowtransparency allow="autoplay"></iframe>
+  </div>
+  <div
+    v-else
     :id="`js-player-yt-${idNumber}`"
     data-plyr-provider="youtube"
     :data-plyr-embed-id="id"
@@ -29,6 +39,12 @@
       id: {
         type: String,
         required: true
+      },
+      /** Bool of whether to use progressive enhancement or not */
+      pe: {
+        type: Boolean,
+        required: false,
+        default () { return true }
       }
     },
     data () {
