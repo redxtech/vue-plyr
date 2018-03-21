@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import plyr from 'plyr'
+  // import plyr from 'plyr'
   import 'plyr/dist/plyr.css'
 
   export default {
@@ -35,6 +35,7 @@
       }
     },
     mounted () {
+      const plyr = require('plyr')
       // noinspection JSPotentiallyInvalidConstructorUsage
       this.player = new plyr(document.getElementById(`plyr-container-${this.idNumber}`).firstChild,
         this.options)

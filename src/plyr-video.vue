@@ -25,7 +25,7 @@
 </template>
 
 <script>
-  import Plyr from 'plyr'
+  // import Plyr from 'plyr'
   import 'plyr/dist/plyr.css'
 
   export default {
@@ -97,6 +97,7 @@
       }
     },
     mounted () {
+      const Plyr = require('plyr')
       this.player = new Plyr(document.getElementById(`js-player-video-${this.idNumber}`), this.options)
       this.emit.forEach(element => {
         this.player.on(element, this.emitPlayerEvent)
