@@ -35,15 +35,15 @@ storiesOf('Plyr', module).
       </audio>
     </plyr></div>`
   })).
-  add('Vimeo', () => ({
+  add('Vimeo (div)', () => ({
     components: { Plyr },
     template: `<div style="width:1200px;height:675px"><plyr>
-      <div data-type="vimeo" data-video-id="147865858"></div>
+      <div data-plyr-provider="vimeo" data-plyr-embed-id="147865858"></div>
     </plyr></div>`
   })).
-  add('Youtube', () => ({
+  add('Youtube (div)', () => ({
     components: { Plyr },
     template: `<div style="width:1200px;height:675px"><plyr>
-      <div data-type="youtube" data-video-id="bTqVqk7FSmY"></div>
+      <div data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY"></div>
     </plyr></div>`
   }))

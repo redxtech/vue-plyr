@@ -35,8 +35,9 @@
       }
     },
     mounted () {
-      this.player = plyr.setup(document.getElementById(`plyr-container-${this.idNumber}`),
-        this.options)[0]
+      // noinspection JSPotentiallyInvalidConstructorUsage
+      this.player = new plyr(document.getElementById(`plyr-container-${this.idNumber}`).firstChild,
+        this.options)
       this.emit.forEach(element => {
         this.player.on(element, this.emitPlayerEvent)
       })
