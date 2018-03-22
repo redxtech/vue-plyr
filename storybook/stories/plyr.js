@@ -6,7 +6,7 @@ import Plyr from '../../src/plyr.vue'
 
 storiesOf('Plyr', module).
   add('Video', () => ({
-    components: { Plyr },
+    components: {Plyr},
     template: `<div style="width:1200px;height:675px"><plyr>
       <video crossorigin
         poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg?v1"
@@ -21,7 +21,7 @@ storiesOf('Plyr', module).
     </plyr></div>`
   })).
   add('Audio', () => ({
-    components: { Plyr },
+    components: {Plyr},
     template: `<div style="width:1200px"><plyr>
       <audio crossorigin>
         <source
@@ -35,15 +35,30 @@ storiesOf('Plyr', module).
       </audio>
     </plyr></div>`
   })).
-  add('Vimeo', () => ({
-    components: { Plyr },
+  add('Vimeo (div)', () => ({
+    components: {Plyr},
     template: `<div style="width:1200px;height:675px"><plyr>
-      <div data-type="vimeo" data-video-id="147865858"></div>
+      <div data-plyr-provider="vimeo" data-plyr-embed-id="147865858"></div>
     </plyr></div>`
   })).
-  add('Youtube', () => ({
-    components: { Plyr },
+  add('Vimeo (PE)', () => ({
+    components: {Plyr},
     template: `<div style="width:1200px;height:675px"><plyr>
-      <div data-type="youtube" data-video-id="bTqVqk7FSmY"></div>
+      <div class="plyr__video-embed">
+    <iframe
+      src="https://player.vimeo.com/video/147865858"
+      allowfullscreen allowtransparency allow="autoplay"></iframe></div></plyr></div>`
+  })).
+  add('Youtube (div)', () => ({
+    components: {Plyr},
+    template: `<div style="width:1200px;height:675px"><plyr>
+      <div data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY"></div>
+    </plyr></div>`
+  })).
+  add('Youtube (PE)', () => ({
+    components: {Plyr},
+    template: `<div style="width:1200px;height:675px"><plyr>
+      <div class="plyr__video-embed">
+      <iframe src="https://www.youtube.com/embed/bTqVqk7FSmY" allowfullscreen allowtransparency allow="autoplay"></iframe></div>
     </plyr></div>`
   }))

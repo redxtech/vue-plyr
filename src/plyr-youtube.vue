@@ -1,13 +1,23 @@
 <template>
   <div
+    v-if="pe"
+    class="plyr__youtube-embed"
     :id="`js-player-yt-${idNumber}`"
-    data-type="youtube"
-    :data-video-id="id"
+  >
+    <iframe
+      :src="`https://www.youtube.com/embed/${id}`"
+      allowfullscreen allowtransparency allow="autoplay"></iframe>
+  </div>
+  <div
+    v-else
+    :id="`js-player-yt-${idNumber}`"
+    data-plyr-provider="youtube"
+    :data-plyr-embed-id="id"
   />
 </template>
 
 <script>
-  import plyr from 'plyr'
+  // import Plyr from 'plyr'
   import 'plyr/dist/plyr.css'
 
   export default {
@@ -29,6 +39,12 @@
       id: {
         type: String,
         required: true
+      },
+      /** Bool of whether to use progressive enhancement or not */
+      pe: {
+        type: Boolean,
+        required: false,
+        default () { return true }
       }
     },
     data () {
@@ -42,7 +58,8 @@
       }
     },
     mounted () {
-      this.player = plyr.setup(document.getElementById(`js-player-yt-${this.idNumber}`), this.options)[0]
+      const Plyr = require('plyr')
+      this.player = new Plyr(document.getElementById(`js-player-yt-${this.idNumber}`), this.options)
       this.emit.forEach(element => {
         this.player.on(element, this.emitPlayerEvent)
       })
@@ -51,7 +68,7 @@
       this.player.destroy()
     },
     methods: {
-      emitPlayerEvent () {
+      emitPlayerEvent (event) {
         this.$emit(event.type, event)
       }
     }

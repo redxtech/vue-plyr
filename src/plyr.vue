@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import plyr from 'plyr'
+  // import plyr from 'plyr'
   import 'plyr/dist/plyr.css'
 
   export default {
@@ -35,8 +35,10 @@
       }
     },
     mounted () {
-      this.player = plyr.setup(document.getElementById(`plyr-container-${this.idNumber}`),
-        this.options)[0]
+      const plyr = require('plyr')
+      // noinspection JSPotentiallyInvalidConstructorUsage
+      this.player = new plyr(document.getElementById(`plyr-container-${this.idNumber}`).firstChild,
+        this.options)
       this.emit.forEach(element => {
         this.player.on(element, this.emitPlayerEvent)
       })
@@ -45,7 +47,7 @@
       this.player.destroy()
     },
     methods: {
-      emitPlayerEvent () {
+      emitPlayerEvent (event) {
         this.$emit(event.type, event)
       }
     }

@@ -13,7 +13,7 @@
 </template>
 
 <script>
-  import plyr from 'plyr'
+  // import Plyr from 'plyr'
   import 'plyr/dist/plyr.css'
 
   export default {
@@ -58,7 +58,8 @@
       }
     },
     mounted () {
-      this.player = plyr.setup(document.getElementById(`js-player-audio-${this.idNumber}`), this.options)[0]
+      const Plyr = require('plyr')
+      this.player = new Plyr(document.getElementById(`js-player-audio-${this.idNumber}`), this.options)
       this.emit.forEach(element => {
         this.player.on(element, this.emitPlayerEvent)
       })
@@ -67,7 +68,7 @@
       this.player.destroy()
     },
     methods: {
-      emitPlayerEvent () {
+      emitPlayerEvent (event) {
         this.$emit(event.type, event)
       }
     }

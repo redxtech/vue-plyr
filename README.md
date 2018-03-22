@@ -3,6 +3,11 @@
 
 This is useful for when you want a nice video player in your Vue app.
 
+It uses [plyr](https://plyr.io) v3 for the players.
+
+Supported player types: html5 video, html5 audio, youtube (div & progressive
+enhancement), and vimeo (div & progressive enhancement).
+
 ## Installation
 
 ```bash
@@ -20,7 +25,8 @@ Include the script file, then use it in the app; e.g.:
 ```
 
 ```js
-Vue.use(VuePlyr)
+// only use this method for when you are using the <script> tags to load vue-plyr.
+Vue.use(VuePlyr['default'])
 ```
 
 ### Module
@@ -50,21 +56,37 @@ Once installed, it can be used in a template as simply as:
 <!-- The preferred way to apply the component is by wrapping it with -->
 <!-- the <plyr> tag. It has a lot more flexibility as you are able -->
 <!-- to manage your element directly. -->
+<!-- video element -->
 <plyr>
     <video>
         <source src="video.mp4" type="video/mp4" />
         <source src="video.ogg" type="video/ogg" />
     </video>
 </plyr>
+<!-- audio element -->
 <plyr>
     <audio>
         <source src="audio.mp3" type="audio/mp3" />
         <source src="audio.ogg" type="audio/ogg" />
     </audio>
 </plyr>
+<!-- youtube iframe with progressive enhancement -->
+<plyr>
+    <div class="plyr__video-embed">
+        <iframe src="https://www.youtube.com/embed/bTqVqk7FSmY" allowfullscreen allowtransparency allow="autoplay"></iframe>
+    </div>
+</plyr>
+<!-- youtube div element -->
 <plyr>
     <div data-type="youtube" data-video-id="bTqVqk7FSmY" />
 </plyr>
+<!-- vimeo iframe with progressive enhancement -->
+<plyr>
+    <div class="plyr__video-embed">
+        <iframe src="https://player.vimeo.com/video/147865858" allowfullscreen allowtransparency allow="autoplay"></iframe>
+    </div>
+</plyr>
+<!-- vimeo div element -->
 <plyr>
     <div data-type="vimeo" data-video-id="147865858" />
 </plyr>
@@ -74,8 +96,11 @@ Once installed, it can be used in a template as simply as:
 <!-- probably be deprecated at some point. -->
 <plyr-video poster="path/to/poster.png" :videos="this.videos" :subtitles="this.subtitles" :crossorigin="true" />
 <plyr-audio :tracks="this.tracks" />
-<plyr-youtube :id="this.youtubeID" />
-<plyr-vimeo :id="this.vimeoID" />
+
+<!-- In both of the youtube & vimeo elements you can pass the prop "pe" -->
+<!-- to use progressive enhancement instead of the div. (true by default) -->
+<plyr-youtube :id="this.youtubeID" :pe="false" />
+<plyr-vimeo :id="this.vimeoID" :pe="true" />
 
 ```
 ```js
