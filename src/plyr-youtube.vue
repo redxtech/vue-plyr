@@ -2,7 +2,6 @@
   <div
     v-if="pe"
     class="plyr__youtube-embed"
-    :id="`js-player-yt-${idNumber}`"
   >
     <iframe
       :src="`https://www.youtube.com/embed/${id}`"
@@ -10,7 +9,6 @@
   </div>
   <div
     v-else
-    :id="`js-player-yt-${idNumber}`"
     data-plyr-provider="youtube"
     :data-plyr-embed-id="id"
   />
@@ -53,13 +51,10 @@
       }
     },
     computed: {
-      idNumber () {
-        return Math.floor(Math.random() * (100000 - 1)) + 1
-      }
     },
     mounted () {
       const Plyr = require('plyr')
-      this.player = new Plyr(document.getElementById(`js-player-yt-${this.idNumber}`), this.options)
+      this.player = new Plyr(this.$el, this.options)
       this.emit.forEach(element => {
         this.player.on(element, this.emitPlayerEvent)
       })

@@ -2,14 +2,12 @@
   <div
     v-if="pe"
     class="plyr__video-embed"
-    :id="`js-player-vimeo-${idNumber}`"
   >
     <iframe
       :src="`https://player.vimeo.com/video/${id}`"
       allowfullscreen allowtransparency allow="autoplay"></iframe>
   </div>
   <div v-else
-       :id="`js-player-vimeo-${idNumber}`"
        data-plyr-provider="vimeo"
        :data-plyr-embed-id="id"
   />
@@ -52,13 +50,10 @@
       }
     },
     computed: {
-      idNumber () {
-        return Math.floor(Math.random() * (100000 - 1)) + 1
-      }
     },
     mounted () {
       const Plyr = require('plyr')
-      this.player = new Plyr(document.getElementById(`js-player-vimeo-${this.idNumber}`), this.options)
+      this.player = new Plyr(this.$el, this.options)
       this.emit.forEach(element => {
         this.player.on(element, this.emitPlayerEvent)
       })
