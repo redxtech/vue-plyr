@@ -11,7 +11,8 @@ describe('PlyrYoutube', () => {
 
   beforeEach(() => {
     wrapper = mountWithProps(PlyrYoutube, {
-      id: 'bTqVqk7FSmY'
+      id: 'bTqVqk7FSmY',
+      pe: false
     })
   })
 
@@ -23,13 +24,13 @@ describe('PlyrYoutube', () => {
     expect(wrapper.contains('div')).toBe(true)
   })
 
-  it('has proper data-type data', () => {
+  it('has proper data-plyr-provider data', () => {
     const source = wrapper.find('div')
-    expect(source.element.getAttribute('data-type')).toBe('youtube')
+    expect(source.element.getAttribute('data-plyr-provider')).toBe('youtube')
   })
 
-  it('has proper data-video-id data', () => {
+  it('has proper data-plyr-embed-id data', () => {
     const source = wrapper.find('div')
-    expect(source.element.getAttribute('data-video-id')).toBe('bTqVqk7FSmY')
+    expect(source.element.getAttribute('data-plyr-embed-id')).toBe('bTqVqk7FSmY')
   })
 })

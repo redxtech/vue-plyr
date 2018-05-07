@@ -11,7 +11,8 @@ describe('PlyrVimeo', () => {
 
   beforeEach(() => {
     wrapper = mountWithProps(PlyrVimeo, {
-      id: '147865858'
+      id: '147865858',
+      pe: false
     })
   })
 
@@ -23,13 +24,13 @@ describe('PlyrVimeo', () => {
     expect(wrapper.contains('div')).toBe(true)
   })
 
-  it('has proper data-type data', () => {
+  it('has proper data-plyr-provider data', () => {
     const source = wrapper.find('div')
-    expect(source.element.getAttribute('data-type')).toBe('vimeo')
+    expect(source.element.getAttribute('data-plyr-provider')).toBe('vimeo')
   })
 
-  it('has proper data-video-id data', () => {
+  it('has proper data-plyr-embed-id data', () => {
     const source = wrapper.find('div')
-    expect(source.element.getAttribute('data-video-id')).toBe('147865858')
+    expect(source.element.getAttribute('data-plyr-embed-id')).toBe('147865858')
   })
 })
