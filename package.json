@@ -38,7 +38,7 @@
     "bili"
   ],
   "dependencies": {
-    "plyr": "^3.0.2"
+    "plyr": "^3.3.10"
   },
   "devDependencies": {
     "@storybook/vue": "^3.3.13",
