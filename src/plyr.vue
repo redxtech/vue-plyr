@@ -35,7 +35,7 @@
       }
     },
     mounted () {
-      const plyr = require('plyr')
+      const plyr = require('plyr-polyfilled')
       // noinspection JSPotentiallyInvalidConstructorUsage
       this.player = new plyr(document.getElementById(`plyr-container-${this.idNumber}`).firstChild,
         this.options)
