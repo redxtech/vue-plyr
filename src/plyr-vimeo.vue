@@ -57,7 +57,7 @@
       }
     },
     mounted () {
-      const Plyr = require('plyr')
+      const Plyr = require('plyr-polyfilled')
       this.player = new Plyr(document.getElementById(`js-player-vimeo-${this.idNumber}`), this.options)
       this.emit.forEach(element => {
         this.player.on(element, this.emitPlayerEvent)
