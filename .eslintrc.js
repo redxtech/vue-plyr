@@ -3,16 +3,21 @@ module.exports = {
   env: {
     browser: true
   },
-  plugins: [
-    'vue'
-  ],
-  extends: [
-    'standard',
-    'plugin:vue/recommended'
+  'extends': [
+    'plugin:vue/essential',
+    '@vue/standard'
   ],
   rules: {
-    'object-curly-spacing': ['error', 'always'],
-    indent: 0,
-    'indent-legacy': ['error', 2]
+    'vue/script-indent': [
+      'error', 2, {
+        'baseIndent': 1
+      }],
+    'indent': 'off',
+    'indent-legacy': ['error', 2],
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+  },
+  parserOptions: {
+    parser: 'babel-eslint'
   }
 }

@@ -1,14 +1,13 @@
 module.exports = {
-  input: "src/index.js",
+  input: 'src/index.js',
   outDir: 'dist',
   format: ['cjs', 'es', 'umd'],
   moduleName: 'VuePlyr',
-  js: 'buble',
+  js: 'babel',
   postcss: {
     extract: true
   },
-  plugin: [
+  plugins: [
     'vue'
-  ],
-  uglifyEs: true
+  ]
 }
