@@ -1,5 +1,5 @@
 <template>
-  <div :id="`plyr-container-${idNumber}`">
+  <div>
     <slot/>
   </div>
 </template>
@@ -30,14 +30,11 @@
       }
     },
     computed: {
-      idNumber () {
-        return Math.floor(Math.random() * (100000 - 1)) + 1
-      }
     },
     mounted () {
       const plyr = require('plyr')
       // noinspection JSPotentiallyInvalidConstructorUsage
-      this.player = new plyr(document.getElementById(`plyr-container-${this.idNumber}`).firstChild,
+      this.player = new plyr(this.$el.firstChild,
         this.options)
       this.emit.forEach(element => {
         this.player.on(element, this.emitPlayerEvent)

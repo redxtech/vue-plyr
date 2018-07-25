@@ -1,6 +1,5 @@
 <template>
   <audio
-    :id="`js-player-audio-${idNumber}`"
     ref="audio"
   >
     <source
@@ -53,13 +52,10 @@
       }
     },
     computed: {
-      idNumber () {
-        return Math.floor(Math.random() * (100000 - 1)) + 1
-      }
     },
     mounted () {
       const Plyr = require('plyr')
-      this.player = new Plyr(document.getElementById(`js-player-audio-${this.idNumber}`), this.options)
+      this.player = new Plyr(this.$el, this.options)
       this.emit.forEach(element => {
         this.player.on(element, this.emitPlayerEvent)
       })
