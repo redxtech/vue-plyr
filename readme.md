@@ -1,4 +1,6 @@
 # vue-plyr
+>v4.0.0 - [Changelog](https://github.com/redxtech/vue-plyr/blob/master/changelog.md)
+
 >A set of Vue components for the plyr video & audio player.
 
 This is useful for when you want a nice video player in your Vue app.
