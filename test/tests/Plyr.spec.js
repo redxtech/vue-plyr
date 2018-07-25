@@ -6,7 +6,9 @@ describe('Plyr (video)', () => {
   let wrapper
 
   beforeEach(() => {
-    wrapper = mount(Plyr)
+    wrapper = mount(Plyr,{
+      attachToDocument: true
+    })
   })
 
   it('is a Vue instance', () => {
