@@ -13,8 +13,7 @@
     "cli-build": "vue-cli-service build --target lib src/index.js",
     "lint": "vue-cli-service lint",
     "test": "vue-cli-service test:unit",
-    "build": "bili",
-    "build:demo": "vue-cli-service serve src/demo/build/main.js"
+    "build": "bili"
   },
   "author": {
     "name": "Gabe Dunn",
