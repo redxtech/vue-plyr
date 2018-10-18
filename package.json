@@ -36,7 +36,7 @@
     "bili"
   ],
   "dependencies": {
-    "plyr": "^3.3.22"
+    "plyr": "^3.4.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-rc.5",
