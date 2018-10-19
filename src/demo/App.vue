@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="links">
-      <router-link to="/">Home</router-link>
+      <router-link to="/">Video</router-link>
       |
       <router-link to="/audio">Audio</router-link>
       |

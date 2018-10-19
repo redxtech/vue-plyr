@@ -1,9 +1,10 @@
 import Vue from 'vue'
 
+import VuePlyr from '../index'
 import App from './App.vue'
 import router from './router'
 
-import '../index'
+Vue.use(VuePlyr)
 
 new Vue({
   router,
