@@ -1,6 +1,6 @@
 {
   "name": "vue-plyr",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "A set of Vue components for the plyr video & audio player.",
   "main": "dist/vue-plyr.js",
   "module": "dist/vue-plyr.es.js",
