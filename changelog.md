@@ -1,5 +1,17 @@
 # Changelog
 
+#### 5.0.0
+- Major change because of breaking fix.
+- Change import scheme to be more common (`Vue.use(VuePlyr)`)
+- Remove sass/scss from dependencies because it wasn't needed.
+- Update dependencies to latest versions.
+- Remove demo build
+- Remove 1440p video from demo (CDN no longer hosted video file)
+- Add and refactor some tests
+- Streamline installation by adding from NPM.
+- Streamline installation by including in `<script>` tag
+- Change link on demo from `Home` to `Video`.
+
 #### 4.0.0
 - Renamed main component from `<plyr>` to `<vue-plyr>`.
 - Removed other components in favour of the main component.
