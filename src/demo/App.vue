@@ -13,23 +13,17 @@
       |
       <router-link to="/youtube-np">YouTube Non Progressive</router-link>
     </div>
-    <router-view />
+    <router-view/>
   </div>
 </template>
 
-<style lang="scss">
+<style>
   .links {
-    padding: {
-      top: 1rem;
-      bottom: 1rem;
-    }
+    padding: 1rem 0;
+  }
 
-    a {
-      font-family: sans-serif;
-      padding: {
-        left: 0.5rem;
-        right: 0.5rem;
-      }
-    }
+  .links a {
+    font-family: sans-serif;
+    padding: 0 0.5rem;
   }
 </style>
