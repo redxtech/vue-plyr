@@ -14,7 +14,7 @@
   dependencies:
     "@babel/highlight" "7.0.0-beta.47"
 
-"@babel/code-frame@^7.0.0", "@babel/code-frame@^7.0.0-beta.35", "@babel/code-frame@^7.0.0-beta.47":
+"@babel/code-frame@^7.0.0", "@babel/code-frame@^7.0.0-beta.35":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.0.0.tgz#06e2ab19bdb535385559aabb5ba59729482800f8"
   dependencies:
@@ -1275,7 +1275,7 @@
   version "3.0.5"
   resolved "https://registry.yarnpkg.com/@vue/cli-overlay/-/cli-overlay-3.0.5.tgz#403bd1b4f58076ca8f85a65cf30e06cda3ce6b39"
 
-"@vue/cli-plugin-babel@^3.0.0-rc.5":
+"@vue/cli-plugin-babel@^3.0.5":
   version "3.0.5"
   resolved "https://registry.yarnpkg.com/@vue/cli-plugin-babel/-/cli-plugin-babel-3.0.5.tgz#6396e6f52771d8a9cfbfe0d9369699a390528c4a"
   dependencies:
@@ -1283,7 +1283,7 @@
     "@vue/babel-preset-app" "^3.0.5"
     babel-loader "^8.0.0-0"
 
-"@vue/cli-plugin-eslint@^3.0.0-rc.5":
+"@vue/cli-plugin-eslint@^3.0.5":
   version "3.0.5"
   resolved "https://registry.yarnpkg.com/@vue/cli-plugin-eslint/-/cli-plugin-eslint-3.0.5.tgz#d673775eaf612658f8c2fbde35610dd050c9c11a"
   dependencies:
@@ -1293,7 +1293,7 @@
     eslint-loader "^2.0.0"
     eslint-plugin-vue "^4.5.0"
 
-"@vue/cli-plugin-unit-jest@^3.0.0-rc.5":
+"@vue/cli-plugin-unit-jest@^3.0.5":
   version "3.0.5"
   resolved "https://registry.yarnpkg.com/@vue/cli-plugin-unit-jest/-/cli-plugin-unit-jest-3.0.5.tgz#31a36ae7b14751d3198a08991640038c432ea75e"
   dependencies:
@@ -1305,7 +1305,7 @@
     jest-transform-stub "^1.0.0"
     vue-jest "^2.6.0"
 
-"@vue/cli-service@^3.0.0-rc.5":
+"@vue/cli-service@^3.0.5":
   version "3.0.5"
   resolved "https://registry.yarnpkg.com/@vue/cli-service/-/cli-service-3.0.5.tgz#6e9fec10f4eeedd0aa8fd76206fda3089142184c"
   dependencies:
@@ -1414,7 +1414,7 @@
     postcss-modules-sync "^1.0.0"
     source-map "0.6.*"
 
-"@vue/eslint-config-standard@^3.0.0-rc.5":
+"@vue/eslint-config-standard@^3.0.5":
   version "3.0.5"
   resolved "https://registry.yarnpkg.com/@vue/eslint-config-standard/-/eslint-config-standard-3.0.5.tgz#7d6ae809eaec90993c6033d9543f48f687b9ebf1"
   dependencies:
@@ -1428,7 +1428,7 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@vue/preload-webpack-plugin/-/preload-webpack-plugin-1.1.0.tgz#d768dba004261c029b53a77c5ea2d5f9ee4f3cce"
 
-"@vue/test-utils@^1.0.0-beta.20":
+"@vue/test-utils@^1.0.0-beta.25":
   version "1.0.0-beta.25"
   resolved "https://registry.yarnpkg.com/@vue/test-utils/-/test-utils-1.0.0-beta.25.tgz#4703076de3076bac42cdd242cd53e6fb8752ed8c"
   dependencies:
@@ -1901,11 +1901,7 @@ babel-code-frame@^6.22.0, babel-code-frame@^6.26.0:
     esutils "^2.0.2"
     js-tokens "^3.0.2"
 
-babel-core@7.0.0-bridge.0:
-  version "7.0.0-bridge.0"
-  resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-7.0.0-bridge.0.tgz#95a492ddd90f9b4e9a4a1da14eb335b87b634ece"
-
-babel-core@^6.0.0, babel-core@^6.26.0:
+babel-core@^6.0.0, babel-core@^6.26.0, babel-core@^6.26.3:
   version "6.26.3"
   resolved "https://registry.yarnpkg.com/babel-core/-/babel-core-6.26.3.tgz#b2e2f09e342d0f0c88e2f02e067794125e75c207"
   dependencies:
@@ -1964,7 +1960,7 @@ babel-helpers@^6.24.1:
     babel-runtime "^6.22.0"
     babel-template "^6.24.1"
 
-babel-jest@^23.0.1, babel-jest@^23.4.0, babel-jest@^23.6.0:
+babel-jest@^23.4.0, babel-jest@^23.6.0:
   version "23.6.0"
   resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-23.6.0.tgz#a644232366557a2240a0c083da6b25786185a2f1"
   dependencies:
@@ -2903,8 +2899,8 @@ copy-descriptor@^0.1.0:
   resolved "https://registry.yarnpkg.com/copy-descriptor/-/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
 
 copy-webpack-plugin@^4.5.2:
-  version "4.5.3"
-  resolved "https://registry.yarnpkg.com/copy-webpack-plugin/-/copy-webpack-plugin-4.5.3.tgz#14a224d205e46f7a79f7956028e1da6df2225ff2"
+  version "4.5.4"
+  resolved "https://registry.yarnpkg.com/copy-webpack-plugin/-/copy-webpack-plugin-4.5.4.tgz#f2b2782b3cd5225535c3dc166a80067e7d940f27"
   dependencies:
     cacache "^10.0.4"
     find-cache-dir "^1.0.0"
@@ -3864,10 +3860,6 @@ esrecurse@^4.1.0:
 estraverse@^4.0.0, estraverse@^4.1.0, estraverse@^4.1.1, estraverse@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/estraverse/-/estraverse-4.2.0.tgz#0dee3fed31fcd469618ce7342099fc1afa0bdb13"
-
-estree-walker@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/estree-walker/-/estree-walker-0.2.1.tgz#bdafe8095383d8414d5dc2ecf4c9173b6db9412e"
 
 estree-walker@^0.5.2:
   version "0.5.2"
@@ -8097,13 +8089,7 @@ rollup-plugin-alias@^1.4.0:
   dependencies:
     slash "^1.0.0"
 
-rollup-plugin-babel@^3.0.7:
-  version "3.0.7"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-babel/-/rollup-plugin-babel-3.0.7.tgz#5b13611f1ab8922497e9d15197ae5d8a23fe3b1e"
-  dependencies:
-    rollup-pluginutils "^1.5.0"
-
-rollup-plugin-babel@^4.0.0-beta.2:
+rollup-plugin-babel@^4.0.0-beta.2, rollup-plugin-babel@^4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/rollup-plugin-babel/-/rollup-plugin-babel-4.0.3.tgz#8282b0e22233160d679e9c7631342e848422fb02"
   dependencies:
@@ -8175,12 +8161,14 @@ rollup-plugin-replace@^2.0.0:
     minimatch "^3.0.2"
     rollup-pluginutils "^2.0.1"
 
-rollup-plugin-terser@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-terser/-/rollup-plugin-terser-1.0.1.tgz#ba5f497cbc9aa38ba19d3ee2167c04ea3ed279af"
+rollup-plugin-terser@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-terser/-/rollup-plugin-terser-3.0.0.tgz#045bd7cf625ee1affcfe6971dab6fffe6fb48c65"
   dependencies:
-    "@babel/code-frame" "^7.0.0-beta.47"
-    terser "^3.7.5"
+    "@babel/code-frame" "^7.0.0"
+    jest-worker "^23.2.0"
+    serialize-javascript "^1.5.0"
+    terser "^3.8.2"
 
 rollup-plugin-uglify@^3.0.0:
   version "3.0.0"
@@ -8188,7 +8176,7 @@ rollup-plugin-uglify@^3.0.0:
   dependencies:
     uglify-es "^3.3.7"
 
-rollup-plugin-vue@^4.3.1:
+rollup-plugin-vue@^4.3.2:
   version "4.3.2"
   resolved "https://registry.yarnpkg.com/rollup-plugin-vue/-/rollup-plugin-vue-4.3.2.tgz#0bdf0cf677565b0ac2358d590f177b6b4ded8cce"
   dependencies:
@@ -8199,13 +8187,6 @@ rollup-plugin-vue@^4.3.1:
     hash-sum "^1.0.2"
     querystring "^0.2.0"
     rollup-pluginutils "^2.0.1"
-
-rollup-pluginutils@^1.5.0:
-  version "1.5.2"
-  resolved "http://registry.npmjs.org/rollup-pluginutils/-/rollup-pluginutils-1.5.2.tgz#1e156e778f94b7255bfa1b3d0178be8f5c552408"
-  dependencies:
-    estree-walker "^0.2.1"
-    minimatch "^3.0.2"
 
 rollup-pluginutils@^2.0.1, rollup-pluginutils@^2.3.0, rollup-pluginutils@^2.3.3:
   version "2.3.3"
@@ -8336,7 +8317,7 @@ send@0.16.2:
     range-parser "~1.2.0"
     statuses "~1.4.0"
 
-serialize-javascript@^1.4.0:
+serialize-javascript@^1.4.0, serialize-javascript@^1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/serialize-javascript/-/serialize-javascript-1.5.0.tgz#1aa336162c88a890ddad5384baebc93a655161fe"
 
@@ -8877,7 +8858,7 @@ term-size@^1.2.0:
   dependencies:
     execa "^0.7.0"
 
-terser@^3.7.5:
+terser@^3.8.2:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/terser/-/terser-3.10.1.tgz#59c8cf87262d59e018ded4df30f834b602b1e232"
   dependencies:
@@ -9332,7 +9313,7 @@ vue-style-loader@^4.1.0:
     hash-sum "^1.0.2"
     loader-utils "^1.0.2"
 
-vue-template-compiler@^2.5.16:
+vue-template-compiler@^2.5.17:
   version "2.5.17"
   resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.5.17.tgz#52a4a078c327deb937482a509ae85c06f346c3cb"
   dependencies:
@@ -9343,7 +9324,7 @@ vue-template-es2015-compiler@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.6.0.tgz#dc42697133302ce3017524356a6c61b7b69b4a18"
 
-vue@^2.5.16:
+vue@^2.5.17:
   version "2.5.17"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.17.tgz#0f8789ad718be68ca1872629832ed533589c6ada"
 
