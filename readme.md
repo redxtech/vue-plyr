@@ -1,5 +1,5 @@
 # vue-plyr
->v4.0.0 - [Changelog](https://github.com/redxtech/vue-plyr/blob/master/changelog.md)
+>v5.0.0 - [Changelog](https://github.com/redxtech/vue-plyr/blob/master/changelog.md)
 
 >A set of Vue components for the plyr video & audio player.
 
@@ -30,8 +30,11 @@ Just include Vue, plyr, the script file, and the css. e.g.:
 
 ```js
 // In your main vue file - the one where you create the initial vue instance.
-import 'vue-plyr'
+import Vue from 'vue'
+import VuePlyr from 'vue-plyr'
 import 'vue-plyr/dist/vue-plyr.css'
+
+Vue.use(VuePlyr)
 ```
 
 ## Usage
