@@ -1,6 +1,6 @@
 <template>
   <div>
-    <slot />
+    <slot/>
   </div>
 </template>
 
@@ -16,9 +16,7 @@
         type: Object,
         required: false,
         default () {
-          return {
-            hideYouTubeDOMError: true
-          }
+          return {}
         }
       },
       /** Array of events to emit from the plyr object */
@@ -34,7 +32,7 @@
       }
     },
     mounted () {
-      this.player = new Plyr(this.$el.firstChild, this.options)
+      this.player = new Plyr(this.$el.firstChild, this.opts)
       this.$emit('player', this.player)
       this.emit.forEach(element => {
         this.player.on(element, this.emitPlayerEvent)
@@ -44,7 +42,7 @@
       try {
         this.player.destroy()
       } catch (e) {
-        if (!(this.options.hideYouTubeDOMError && e.message === 'The YouTube player is not attached to the DOM.')) {
+        if (!(this.opts.hideYouTubeDOMError && e.message === 'The YouTube player is not attached to the DOM.')) {
           console.error(e)
         }
       }
@@ -52,6 +50,15 @@
     methods: {
       emitPlayerEvent (event) {
         this.$emit(event.type, event)
+      }
+    },
+    computed: {
+      opts () {
+        const options = this.options
+        if (!this.options.hasOwnProperty('hideYouTubeDOMError')) {
+          options.hideYouTubeDOMError = true
+        }
+        return options
       }
     }
   }
