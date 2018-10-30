@@ -13,18 +13,17 @@ enhancement), and Vimeo (div & progressive enhancement).
 ## Installation
 
 ```bash
-yarn add vue-plyr plyr # or npm i vue-plyr plyr
+yarn add vue-plyr # or npm i vue-plyr
 ```
 
 ### Browser
 
-Just include Vue, plyr, the script file, and the css. e.g.:
+Just include Vue, the script file, and the css. e.g.:
 
 ```html
-<script type="text/javascript" src="https://unpkg.com/vue@latest"></script>
-<script type="text/javascript" src="https://unpkg.com/plyr@latest"></script>
-<script type="text/javascript" src="https://unpkg.com/vue-plyr@latest"></script>
-<link rel="stylesheet" href="https://unpkg.com/vue-plyr@latest/dist/vue-plyr.css">
+<script type="text/javascript" src="https://unpkg.com/vue"></script>
+<script type="text/javascript" src="https://unpkg.com/vue-plyr/dist/vue-plyr.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/vue-plyr/dist/vue-plyr.css">
 ```
 ### Module
 
@@ -32,7 +31,6 @@ Just include Vue, plyr, the script file, and the css. e.g.:
 // In your main vue file - the one where you create the initial vue instance.
 import Vue from 'vue'
 import VuePlyr from 'vue-plyr'
-import 'vue-plyr/dist/vue-plyr.css'
 
 Vue.use(VuePlyr)
 ```
@@ -108,7 +106,15 @@ component is mounted. The payload is the player object. You can use this to mani
 ## SSR
 
 This should support SSR out of the box. For nuxt, create a file called `vue-plyr.js` in your plugins folder containing
-only the two lines `import 'vue-plyr'` & `import 'vue-plyr/dist/vue-plyr.css'`. Then, in your `nuxt.config.js` file add
+only the three lines:
+```js
+import Vue from 'vue'
+import VuePlyr from 'vue-plyr'.
+
+Vue.use(VuePlyr)
+```
+
+Then, in your `nuxt.config.js` file add
 `'~/plugins/vue-plyr'` to the plugins array. The `vue-plyr` element should be globally registered now.
 
 ## Author
