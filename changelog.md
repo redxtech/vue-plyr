@@ -1,5 +1,12 @@
 # Changelog
 
+#### 5.0.2
+- Fix default export.
+- Fix component not registered issue.
+
+#### 5.0.1
+- Update Plyr version.
+
 #### 5.0.0
 - Major change because of breaking fix.
 - Change import scheme to be more common (`Vue.use(VuePlyr)`)
