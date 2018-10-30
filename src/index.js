@@ -18,9 +18,4 @@ if (typeof window !== 'undefined' && window.Vue) {
   window.Vue.use(VuePlyrPlugin)
 }
 
-export {
-  VuePlyrPlugin,
-  VuePlyr
-}
-
 export default VuePlyrPlugin

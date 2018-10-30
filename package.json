@@ -1,8 +1,8 @@
 {
   "name": "vue-plyr",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "A set of Vue components for the plyr video & audio player.",
-  "main": "dist/vue-plyr.js",
+  "main": "dist/vue-plyr.cjs.js",
   "module": "dist/vue-plyr.es.js",
   "jsnext:main": "dist/vue-plyr.es.js",
   "files": [
@@ -39,14 +39,13 @@
     "plyr": "^3.4.5"
   },
   "devDependencies": {
+    "@babel/core": "^7.1.2",
     "@vue/cli-plugin-babel": "^3.0.5",
     "@vue/cli-plugin-eslint": "^3.0.5",
     "@vue/cli-plugin-unit-jest": "^3.0.5",
     "@vue/cli-service": "^3.0.5",
     "@vue/eslint-config-standard": "^3.0.5",
     "@vue/test-utils": "^1.0.0-beta.25",
-    "babel-core": "^6.26.3",
-    "babel-jest": "^23.6.0",
     "bili": "^3.1.2",
     "identity-obj-proxy": "^3.0.0",
     "rollup-plugin-babel": "^4.0.3",
