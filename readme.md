@@ -113,4 +113,4 @@ only the two lines `import 'vue-plyr'` & `import 'vue-plyr/dist/vue-plyr.css'`. 
 
 ## Author
 
-**plyr-vue** © [RedXTech](https://github.com/redxtech), Released under the [MIT](./LICENSE.md) License.
+**vue-plyr** © [RedXTech](https://github.com/redxtech), Released under the [MIT](./LICENSE.md) License.
