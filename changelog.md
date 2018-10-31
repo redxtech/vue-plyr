@@ -1,5 +1,16 @@
 # Changelog
 
+#### 5.0.4
+- Update documentation to include new and better methods to access
+player instance and events.
+- Slightly reorganize readme.
+
+#### 5.0.3
+- Prevent default option from being accidentally overwritten.
+- Fix readme footer.
+- Update readme to reflect installation methods.
+- Re-Add named exports.
+
 #### 5.0.2
 - Fix default export.
 - Fix component not registered issue.

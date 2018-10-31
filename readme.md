@@ -1,5 +1,5 @@
 # vue-plyr
->v5.0.2 - [Changelog](https://github.com/redxtech/vue-plyr/blob/master/changelog.md)
+>v5.0.4 - [Changelog](https://github.com/redxtech/vue-plyr/blob/master/changelog.md)
 
 >A set of Vue components for the plyr video & audio player.
 
@@ -88,20 +88,72 @@ Once installed, it can be used in a template as simply as:
 </vue-plyr>
 ```
 
-If you want to have events from the plyr instance emitted back to a parent component, just pass an array of the events
-you want emitted. Valid events are [here](https://github.com/sampotts/plyr#events).
+## Player Instance
+
+To access the player instance, you have two options. The preferred
+method is to access the player through the `refs` attribute.
+
+```html
+<template>
+  <vue-plyr ref="player"></vue-plyr>
+</template>
+<script>
+  name: 'Component',
+  mounted () {
+    console.log(this.player)
+  },
+  computed: {
+    player () { return this.$refs.player.player }
+  }
+</script>
+```
+
+You are also able to access it through the `@player` event **(soon to be
+removed)** which is emitted when the component is mounted. The payload
+is the player object. You can use this to manipulate the instance
+directly.
+
+## Events
+
+If you want to capture events from the plyr instance, there are a few
+options:
+
+The preferred method is accessing the player instance through the `ref`
+attribute and using that object for events, as you would with a vanilla
+plyr instance.
+
+Valid events are [here](https://github.com/sampotts/plyr#events).
+
+```html
+<template>
+  <vue-plyr ref="player"></vue-plyr>
+</template>
+<script>
+  name: 'Component',
+  mounted () {
+    this.player.on('event', () => console.log('event fired'))
+  },
+  computed: {
+    player () { return this.$refs.player.player }
+  }
+</script>
+```
+
+The other way **(soon to be removed)** is to just pass an array of the
+events you want emitted.
+
 ```html
 <vue-plyr :emit="['timeupdate','exitfullscreen']" @timeupdate="videoTimeUpdated" @exitfullscreen="exitedFullScreen">
 ```
 
-For custom options you can pass an `options` prop which is an object that will be passed to the `new Plyr()`
-creation. Available options [here](https://github.com/sampotts/plyr#options). I added an additional option
-(`hideYouTubeDOMError`) that hides the error that is always logged when destroying a YouTube player. It defaults to
-`true`, and you can disable it to see the error by setting it to false.
+## Options
 
-To access the player instance, you have two options. In any of the events, you can access the player object through
-`event.detail.plyr`. However, the preferred way to access it is through the `@player` event which is emitted when the
-component is mounted. The payload is the player object. You can use this to manipulate the instance directly.
+For custom options you can pass an `options` prop which is an object
+that will be passed to the `new Plyr()` creation. Available options
+[here](https://github.com/sampotts/plyr#options). I added an additional
+option (`hideYouTubeDOMError`) that hides the error that is always
+logged when destroying a YouTube player. It defaults to `true`, and you
+can disable it to see the error by setting it to false.
 
 ## SSR
 
