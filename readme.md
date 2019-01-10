@@ -161,7 +161,7 @@ This should support SSR out of the box. For nuxt, create a file called `vue-plyr
 only the three lines:
 ```js
 import Vue from 'vue'
-import VuePlyr from 'vue-plyr'.
+import VuePlyr from 'vue-plyr'
 
 Vue.use(VuePlyr)
 ```
