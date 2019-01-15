@@ -1,7 +1,7 @@
 <template>
   <div class="plyr__video-embed">
     <iframe
-      src="https://player.vimeo.com/video/76979871?loop=false&amp;byline=false&amp;portrait=false&amp;title=false&amp;speed=true&amp;transparent=0&amp;gesture=media"
+      src="https://player.vimeo.com/video/76979871?loop=false&byline=false&portrait=false&title=false&speed=true&transparent=0&gesture=media"
       allowfullscreen
       allowtransparency
       allow="autoplay"

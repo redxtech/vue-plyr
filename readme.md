@@ -61,7 +61,7 @@ Once installed, it can be used in a template as simply as:
 <vue-plyr>
   <div class="plyr__video-embed">
     <iframe
-      src="https://www.youtube.com/embed/bTqVqk7FSmY?iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1"
+      src="https://www.youtube.com/embed/bTqVqk7FSmY?iv_load_policy=3&modestbranding=1&playsinline=1&showinfo=0&rel=0&enablejsapi=1"
       allowfullscreen allowtransparency allow="autoplay">
     </iframe>
   </div>
@@ -76,7 +76,7 @@ Once installed, it can be used in a template as simply as:
 <vue-plyr>
     <div class="plyr__video-embed">
       <iframe
-        src="https://player.vimeo.com/video/76979871?loop=false&amp;byline=false&amp;portrait=false&amp;title=false&amp;speed=true&amp;transparent=0&amp;gesture=media"
+        src="https://player.vimeo.com/video/76979871?loop=false&byline=false&portrait=false&title=false&speed=true&transparent=0&gesture=media"
         allowfullscreen allowtransparency allow="autoplay">
       </iframe>
     </div>
