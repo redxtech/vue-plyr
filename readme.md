@@ -1,5 +1,5 @@
 # vue-plyr
->v5.0.4 - [Changelog](https://github.com/redxtech/vue-plyr/blob/master/changelog.md)
+>v5.1.0 - [Changelog](https://github.com/redxtech/vue-plyr/blob/master/changelog.md)
 
 >A set of Vue components for the plyr video & audio player.
 
@@ -31,6 +31,7 @@ Just include Vue, the script file, and the css. e.g.:
 // In your main vue file - the one where you create the initial vue instance.
 import Vue from 'vue'
 import VuePlyr from 'vue-plyr'
+import 'vue-plyr/dist/vue-plyr.css' // only if your build system can import css, otherwise import it wherever you would import your css.
 
 Vue.use(VuePlyr)
 ```
@@ -95,7 +96,7 @@ method is to access the player through the `refs` attribute.
 
 ```html
 <template>
-  <vue-plyr ref="player"></vue-plyr>
+  <vue-plyr ref="plyr"></vue-plyr>
 </template>
 <script>
   name: 'Component',
@@ -103,7 +104,7 @@ method is to access the player through the `refs` attribute.
     console.log(this.player)
   },
   computed: {
-    player () { return this.$refs.player.player }
+    player () { return this.$refs.plyr.player }
   }
 </script>
 ```
@@ -126,7 +127,7 @@ Valid events are [here](https://github.com/sampotts/plyr#events).
 
 ```html
 <template>
-  <vue-plyr ref="player"></vue-plyr>
+  <vue-plyr ref="plyr"></vue-plyr>
 </template>
 <script>
   name: 'Component',
@@ -134,7 +135,7 @@ Valid events are [here](https://github.com/sampotts/plyr#events).
     this.player.on('event', () => console.log('event fired'))
   },
   computed: {
-    player () { return this.$refs.player.player }
+    player () { return this.$refs.plyr.player }
   }
 </script>
 ```
@@ -166,8 +167,9 @@ import VuePlyr from 'vue-plyr'
 Vue.use(VuePlyr)
 ```
 
-Then, in your `nuxt.config.js` file add
-`'~/plugins/vue-plyr'` to the plugins array. The `vue-plyr` element should be globally registered now.
+Then, in your `nuxt.config.js` file add `'~/plugins/vue-plyr'` to the plugins array. The `vue-plyr` element should be globally registered now.
+
+You will also want to add `vue-plyr/dist/vue-plyr.css` to your css array in the same file.
 
 ## Author
 

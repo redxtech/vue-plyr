@@ -1,5 +1,13 @@
 # Changelog
 
+#### 5.1.0
+- Remove auto import of css.
+- Restructure demos.
+- Change all &amp; to be &.
+- Change `refs="player"` to `refs="plyr"` in readme.
+- Update nuxt usage in readme.
+- Update dependencies to latest version.
+
 #### 5.0.4
 - Update documentation to include new and better methods to access
 player instance and events.

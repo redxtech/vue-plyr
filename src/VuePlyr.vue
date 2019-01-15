@@ -6,7 +6,6 @@
 
 <script>
   import Plyr from 'plyr'
-  import 'plyr/dist/plyr.css'
 
   export default {
     name: 'vue-plyr',
@@ -19,7 +18,7 @@
           return {}
         }
       },
-      /** Array of events to emit from the plyr object */
+      /** Array of events to emit from the plyr object **/
       emit: {
         type: Array,
         required: false,
@@ -63,3 +62,7 @@
     }
   }
 </script>
+
+<style>
+  @import '~plyr/dist/plyr.css'
+</style>
