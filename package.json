@@ -9,7 +9,7 @@
     "dist"
   ],
   "scripts": {
-    "serve": "vue-cli-service serve src/demo/main.js",
+    "serve": "vue-cli-service serve src/demo/vue-cli/main.js",
     "cli-build": "vue-cli-service build --target lib src/index.js",
     "lint": "vue-cli-service lint",
     "test": "vue-cli-service test:unit",

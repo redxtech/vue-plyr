@@ -1,6 +1,6 @@
 import Vue from 'vue'
 
-import VuePlyr from '../index'
+import VuePlyr from '../../index'
 import App from './App.vue'
 import router from './router'
 
