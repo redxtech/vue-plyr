@@ -1,6 +1,6 @@
 {
   "name": "vue-plyr",
-  "version": "5.0.4",
+  "version": "5.1.0",
   "description": "A set of Vue components for the plyr video & audio player.",
   "main": "dist/vue-plyr.cjs.js",
   "module": "dist/vue-plyr.es.js",
@@ -9,7 +9,10 @@
     "dist"
   ],
   "scripts": {
-    "serve": "vue-cli-service serve src/demo/main.js",
+    "serve": "vue-cli-service serve src/demo/vue-cli/main.js",
+    "demo:vue-cli": "vue-cli-service serve src/demo/vue-cli/main.js",
+    "demo:nuxt": "nuxt -c src/demo/nuxt/nuxt.config.js",
+    "demo:nuxt:spa": "nuxt -c src/demo/nuxt/nuxt.config.js -s",
     "cli-build": "vue-cli-service build --target lib src/index.js",
     "lint": "vue-cli-service lint",
     "test": "vue-cli-service test:unit",
@@ -36,24 +39,27 @@
     "bili"
   ],
   "dependencies": {
-    "plyr": "^3.4.5"
+    "plyr": "^3.4.7"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@vue/cli-plugin-babel": "^3.0.5",
-    "@vue/cli-plugin-eslint": "^3.0.5",
-    "@vue/cli-plugin-unit-jest": "^3.0.5",
-    "@vue/cli-service": "^3.0.5",
-    "@vue/eslint-config-standard": "^3.0.5",
-    "@vue/test-utils": "^1.0.0-beta.25",
-    "bili": "^3.1.2",
+    "@babel/core": "^7.2.2",
+    "@vue/cli-plugin-babel": "^3.3.0",
+    "@vue/cli-plugin-eslint": "^3.3.0",
+    "@vue/cli-plugin-unit-jest": "^3.3.0",
+    "@vue/cli-service": "^3.3.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "@vue/test-utils": "^1.0.0-beta.28",
+    "bili": "^3.4.2",
+    "cross-env": "^5.2.0",
     "identity-obj-proxy": "^3.0.0",
-    "rollup-plugin-babel": "^4.0.3",
-    "rollup-plugin-postcss": "^1.6.2",
-    "rollup-plugin-terser": "^3.0.0",
-    "rollup-plugin-vue": "^4.3.2",
-    "vue": "^2.5.17",
-    "vue-router": "^3.0.1",
-    "vue-template-compiler": "^2.5.17"
+    "nodemon": "^1.18.9",
+    "nuxt": "^2.3.4",
+    "rollup-plugin-babel": "^4.3.0",
+    "rollup-plugin-postcss": "^1.6.3",
+    "rollup-plugin-terser": "^4.0.2",
+    "rollup-plugin-vue": "^4.6.1",
+    "vue": "^2.5.22",
+    "vue-router": "^3.0.2",
+    "vue-template-compiler": "^2.5.22"
   }
 }

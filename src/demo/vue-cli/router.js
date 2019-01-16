@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Video from './components/Video'
-import Audio from './components/Audio'
-import Vimeo from './components/Vimeo'
-import YouTube from './components/YouTube'
-import YouTubeNP from './components/YouTubeNP'
-import VimeoNP from './components/VimeoNP'
+import Video from '../components/Video'
+import Audio from '../components/Audio'
+import Vimeo from '../components/Vimeo'
+import YouTube from '../components/YouTube'
+import YouTubeNP from '../components/YouTubeNP'
+import VimeoNP from '../components/VimeoNP'
 
 Vue.use(Router)
 

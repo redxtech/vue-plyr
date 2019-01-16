@@ -1,5 +1,15 @@
 # Changelog
 
+#### 5.1.0
+- Remove auto import of CSS within JS to prevent CJS errors.
+- Import CSS with `<style src="plyr.css"></style>` so bili would find it.
+- Restructure demos.
+- Add nuxt demo.
+- Change all &amp; to be &.
+- Change `refs="player"` to `refs="plyr"` in readme.
+- Update nuxt usage in readme.
+- Update dependencies to latest version.
+
 #### 5.0.4
 - Update documentation to include new and better methods to access
 player instance and events.
