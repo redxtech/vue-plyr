@@ -10,7 +10,7 @@
   export default {
     name: 'vue-plyr',
     props: {
-      /** Options object for plyr config. */
+      /** Options object for plyr config. **/
       options: {
         type: Object,
         required: false,
@@ -63,6 +63,4 @@
   }
 </script>
 
-<style>
-  @import '~plyr/dist/plyr.css'
-</style>
+<style src="../node_modules/plyr/dist/plyr.css"></style>
