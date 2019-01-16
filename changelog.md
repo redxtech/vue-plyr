@@ -1,8 +1,10 @@
 # Changelog
 
 #### 5.1.0
-- Remove auto import of css.
+- Remove auto import of CSS within JS to prevent CJS errors.
+- Import CSS with `<style src="plyr.css"></style>` so bili would find it.
 - Restructure demos.
+- Add nuxt demo.
 - Change all &amp; to be &.
 - Change `refs="player"` to `refs="plyr"` in readme.
 - Update nuxt usage in readme.
