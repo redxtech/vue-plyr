@@ -181,7 +181,7 @@ export default {
     'vue-plyr/dist/vue-plyr.css'
   ]
 }
-``
+```
 
 ## Author
 
