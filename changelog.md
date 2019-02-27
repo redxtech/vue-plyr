@@ -1,5 +1,8 @@
 # Changelog
 
+#### 5.1.1
+- Update plyr to [3.5.2](https://github.com/sampotts/plyr/blob/master/changelog.md#v352)
+
 #### 5.1.0
 - Remove auto import of CSS within JS to prevent CJS errors.
 - Import CSS with `<style src="plyr.css"></style>` so bili would find it.
