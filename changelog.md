@@ -1,7 +1,10 @@
 # Changelog
 
+#### 5.1.3
+- Fix empty npm push.
+
 #### 5.1.2
- - Fix readme because I forgot to bump it previously.
+- Fix readme because I forgot to bump it previously.
 
 #### 5.1.1
 - Update plyr to [3.5.2](https://github.com/sampotts/plyr/blob/master/changelog.md#v352).
