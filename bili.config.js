@@ -1,18 +1,20 @@
-const babel = require('rollup-plugin-babel')
-
 module.exports = {
-  input: 'src/index.js',
-  outDir: 'dist',
-  format: ['cjs', 'es', 'umd'],
-  moduleName: 'VuePlyr',
+  input: {
+    'vue-plyr': 'src/index.js'
+  },
+  output: {
+    format: ['cjs', 'es', 'umd', 'umd-min'],
+    moduleName: 'VuePlyr'
+  },
   postcss: {
     extract: true
   },
-  plugins: [
-    'vue',
-    babel({
+  plugins: {
+    vue: true,
+    babel: {
       runtimeHelpers: true,
+      sourceMap: true,
       extensions: ['.js', '.vue']
-    })
-  ]
+    }
+  }
 }
