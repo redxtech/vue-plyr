@@ -2,9 +2,9 @@
   "name": "vue-plyr",
   "version": "5.1.2",
   "description": "A set of Vue components for the plyr video & audio player.",
-  "main": "dist/vue-plyr.cjs.js",
-  "module": "dist/vue-plyr.es.js",
-  "jsnext:main": "dist/vue-plyr.es.js",
+  "main": "dist/vue-plyr.js",
+  "module": "dist/vue-plyr.mjs",
+  "jsnext:main": "dist/vue-plyr.mjs",
   "files": [
     "dist"
   ],
@@ -16,6 +16,7 @@
     "cli-build": "vue-cli-service build --target lib src/index.js",
     "lint": "vue-cli-service lint",
     "test": "vue-cli-service test:unit",
+    "prebuild": "rimraf dist",
     "build": "bili"
   },
   "author": {
@@ -49,13 +50,14 @@
     "@vue/cli-service": "^3.3.0",
     "@vue/eslint-config-standard": "^4.0.0",
     "@vue/test-utils": "^1.0.0-beta.28",
-    "bili": "^3.4.2",
+    "bili": "^4.5.2",
     "cross-env": "^5.2.0",
     "identity-obj-proxy": "^3.0.0",
     "nodemon": "^1.18.9",
     "nuxt": "^2.3.4",
+    "rimraf": "^2.6.3",
     "rollup-plugin-babel": "^4.3.0",
-    "rollup-plugin-postcss": "^1.6.3",
+    "rollup-plugin-postcss": "^2.0.3",
     "rollup-plugin-terser": "^4.0.2",
     "rollup-plugin-vue": "^4.6.1",
     "vue": "^2.5.22",

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import * as Plyr from 'plyr'
+  import Plyr from 'plyr/dist/plyr.mjs'
 
   export default {
     name: 'vue-plyr',
