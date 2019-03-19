@@ -1,7 +1,13 @@
 import VuePlyr from './VuePlyr.vue'
 
 const VuePlyrPlugin = {
-  install (Vue, options) {
+  install (Vue, options = {}) {
+    if (options.plyr) {
+      VuePlyr.props.options.default = () => { return { ...options.plyr } }
+    }
+    if (options.emit) {
+      VuePlyr.props.emit.default = () => { return [ ...options.emit ] }
+    }
     Vue.component(VuePlyr.name, VuePlyr)
   }
 }
