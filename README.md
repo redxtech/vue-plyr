@@ -33,7 +33,13 @@ import Vue from 'vue'
 import VuePlyr from 'vue-plyr'
 import 'vue-plyr/dist/vue-plyr.css' // only if your build system can import css, otherwise import it wherever you would import your css.
 
-Vue.use(VuePlyr)
+// Second argument with defaults can be omitted
+Vue.use(VuePlyr, {
+  plyr: {
+    fullscreen: { enabled: false }
+  },
+  emit: ['ended']
+})
 ```
 
 ## Usage
@@ -164,7 +170,13 @@ only the three lines:
 import Vue from 'vue'
 import VuePlyr from 'vue-plyr'
 
-Vue.use(VuePlyr)
+// Second argument with defaults can be omitted
+Vue.use(VuePlyr, {
+  plyr: {
+    fullscreen: { enabled: false }
+  },
+  emit: ['ended']
+})
 ```
 
 Then, in your `nuxt.config.js` file add `'~/plugins/vue-plyr'` to the plugins array. The `vue-plyr` element should be globally registered now. I might add a nuxt config file to the package at some point in the future so that you do not have to create the file yourself, but currently you have to make it manually.
