@@ -1,6 +1,6 @@
 {
   "name": "vue-plyr",
-  "version": "5.1.2",
+  "version": "5.1.3",
   "description": "A set of Vue components for the plyr video & audio player.",
   "main": "dist/vue-plyr.cjs.js",
   "module": "dist/vue-plyr.es.js",
@@ -39,7 +39,7 @@
     "bili"
   ],
   "dependencies": {
-    "plyr": "^3.5.2"
+    "plyr": "^3.5.4"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
