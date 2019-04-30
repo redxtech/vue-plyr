@@ -1,6 +1,6 @@
 import Vue from 'vue'
 
-import VuePlyr from '../../../dist/vue-plyr.es'
+import VuePlyr from '../../../dist/vue-plyr'
 import '../../../dist/vue-plyr.css'
 import App from './App.vue'
 import router from './router'
