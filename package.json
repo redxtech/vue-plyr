@@ -51,7 +51,7 @@
     "@vue/eslint-config-standard": "^4.0.0",
     "@vue/test-utils": "^1.0.0-beta.28",
     "bili": "^4.7.3",
-    "cross-env": "^5.2.0",
+    "cross-env": "^6.0.3",
     "identity-obj-proxy": "^3.0.0",
     "nodemon": "^1.18.11",
     "nuxt": "^2.6.3",
