@@ -55,7 +55,7 @@
     "identity-obj-proxy": "^3.0.0",
     "nodemon": "^1.18.11",
     "nuxt": "^2.6.3",
-    "rimraf": "^2.6.3",
+    "rimraf": "^3.0.0",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-postcss": "^2.0.3",
     "rollup-plugin-terser": "^5.1.2",
