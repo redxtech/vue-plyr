@@ -1,7 +1,11 @@
 # Changelog
 
-#### 5.1.3
-- Fix empty npm push.
+#### 6.0.0
+- Change import to be more natural.
+- Move to esm export.
+- Change demo.
+- Revamp how using the plugin works.
+- Remove player event.
 
 #### 5.1.2
 - Fix readme because I forgot to bump it previously.

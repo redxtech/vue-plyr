@@ -1,7 +1,7 @@
 # vue-plyr
->v5.1.3 - [Changelog](https://github.com/redxtech/vue-plyr/blob/master/changelog.md)
+>v6.0.0 - [Changelog](https://github.com/redxtech/vue-plyr/blob/master/changelog.md)
 
->A set of Vue components for the plyr video & audio player.
+>A vue component for the plyr video & audio player.
 
 This is useful for when you want a nice video player in your Vue app.
 
@@ -13,27 +13,17 @@ enhancement), and Vimeo (div & progressive enhancement).
 ## Installation
 
 ```bash
-yarn add vue-plyr # or npm i vue-plyr
+yarn add vue-plyr plyr # or npm i vue-plyr plyr
 ```
 
-### Browser
-
-Just include Vue, the script file, and the css. e.g.:
-
-```html
-<script type="text/javascript" src="https://unpkg.com/vue"></script>
-<script type="text/javascript" src="https://unpkg.com/vue-plyr/dist/vue-plyr.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/vue-plyr/dist/vue-plyr.css">
-```
 ### Module
 
 ```js
 // In your main vue file - the one where you create the initial vue instance.
 import Vue from 'vue'
 import VuePlyr from 'vue-plyr'
-import 'vue-plyr/dist/vue-plyr.css' // only if your build system can import css, otherwise import it wherever you would import your css.
 
-// Second argument with defaults can be omitted
+// The second argument is the default config values which can be omitted.
 Vue.use(VuePlyr, {
   plyr: {
     fullscreen: { enabled: false }
@@ -105,20 +95,15 @@ method is to access the player through the `refs` attribute.
   <vue-plyr ref="plyr"></vue-plyr>
 </template>
 <script>
-  name: 'Component',
+  'Component',
   mounted () {
     console.log(this.player)
   },
-  computed: {
+  {
     player () { return this.$refs.plyr.player }
   }
 </script>
 ```
-
-You are also able to access it through the `@player` event **(soon to be
-removed)** which is emitted when the component is mounted. The payload
-is the player object. You can use this to manipulate the instance
-directly.
 
 ## Events
 
@@ -136,17 +121,17 @@ Valid events are [here](https://github.com/sampotts/plyr#events).
   <vue-plyr ref="plyr"></vue-plyr>
 </template>
 <script>
-  name: 'Component',
+  'Component',
   mounted () {
     this.player.on('event', () => console.log('event fired'))
   },
-  computed: {
+  {
     player () { return this.$refs.plyr.player }
   }
 </script>
 ```
 
-The other way **(soon to be removed)** is to just pass an array of the
+The other way is to just pass an array of the
 events you want emitted.
 
 ```html
@@ -170,7 +155,7 @@ only the three lines:
 import Vue from 'vue'
 import VuePlyr from 'vue-plyr'
 
-// Second argument with defaults can be omitted
+// The second argument is the default config values which can be omitted.
 Vue.use(VuePlyr, {
   plyr: {
     fullscreen: { enabled: false }
@@ -188,9 +173,6 @@ The `nuxt.config.js` file should at minimum include this:
 export default {
   plugins: [
     '~/plugins/vue-plyr'
-  ],
-  css: [
-    'vue-plyr/dist/vue-plyr.css'
   ]
 }
 ```
