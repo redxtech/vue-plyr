@@ -1,6 +1,6 @@
 {
   "name": "vue-plyr",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "description": "A vue component for the plyr video & audio player.",
   "license": "MIT",
   "author": {
@@ -14,13 +14,16 @@
     "build": "rollup -c",
     "lint": "vue-cli-service lint"
   },
-  "main": "dist/vue-plyr.js",
-  "module": "dist/vue-plyr.js",
-  "jsnext:main": "dist/vue-plyr.js",
+  "main": "./dist/vue-plyr.ssr.js",
+  "module": "./dist/vue-plyr.esm.js",
+  "jsnext:main": "./dist/vue-plyr.esm.js",
+  "browser": "./dist/vue-plyr.js",
+  "unpkg": "./dist/vue-plyr.js",
   "files": [
     "dist"
   ],
   "keywords": [
+    "vue-plyr",
     "vue",
     "plyr",
     "video",
@@ -47,6 +50,9 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "rollup": "^1.27.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-copy": "^3.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-vue": "^5.1.2",
     "vue-template-compiler": "^2.6.10"
   }

@@ -1,23 +1,21 @@
 # vue-plyr
->v6.0.0 - [Changelog](https://github.com/redxtech/vue-plyr/blob/master/changelog.md)
+>v6.0.1 - [Changelog](https://github.com/redxtech/vue-plyr/blob/master/changelog.md)
 
->A vue component for the plyr video & audio player.
+A vue component for the plyr video & audio player.
 
 This is useful for when you want a nice video player in your Vue app.
 
-It uses [plyr](https://plyr.io) v3 for the players.
+It uses [plyr](https://plyr.io) by [sampotts](https://github.com/sampotts) v3 for the players.
 
 Supported player types: HTML5 video, HTML5 audio, YouTube (div & progressive
 enhancement), and Vimeo (div & progressive enhancement).
 
 ## Installation
-
 ```bash
-yarn add vue-plyr plyr # or npm i vue-plyr plyr
+yarn add vue-plyr # or npm i vue-plyr
 ```
 
 ### Module
-
 ```js
 // In your main vue file - the one where you create the initial vue instance.
 import Vue from 'vue'
@@ -32,10 +30,19 @@ Vue.use(VuePlyr, {
 })
 ```
 
+### SSR [(more below)](#SSR)
+For SSR you can import the SSR optimized module, found at `./dist/vue-plyr.ssr.js`.
+There is a more in depth description on how to use it with [nuxt](#nuxt) below.
+
+### Browser
+In the browser you can include it as you would any other package: with unpkg.
+```html
+<script type="text/javascript" src="https://unpkg.com/vue"></script>
+<script type="text/javascript" src="https://unpkg.com/vue-plyr"></script>
+```
+
 ## Usage
-
 Once installed, it can be used in a template as simply as:
-
 ```vue
 <!-- video element -->
 <vue-plyr>
@@ -86,27 +93,29 @@ Once installed, it can be used in a template as simply as:
 ```
 
 ## Player Instance
-
-To access the player instance, you have two options. The preferred
-method is to access the player through the `refs` attribute.
+To access the player instance, you can use the `refs` attribute.
 
 ```html
 <template>
   <vue-plyr ref="plyr"></vue-plyr>
 </template>
+
 <script>
-  'Component',
+export default {
+  name: 'Component',
+  computed () {
+    player () {
+      return this.$refs.plyr.player
+    }
+  },
   mounted () {
     console.log(this.player)
-  },
-  {
-    player () { return this.$refs.plyr.player }
   }
+}
 </script>
 ```
 
 ## Events
-
 If you want to capture events from the plyr instance, there are a few
 options:
 
@@ -121,15 +130,18 @@ Valid events are [here](https://github.com/sampotts/plyr#events).
   <vue-plyr ref="plyr"></vue-plyr>
 </template>
 <script>
-  'Component',
+export default {
+  name: 'Component',
+  computed () {
+    player () {
+      return this.$refs.plyr.player
+    }
+  },
   mounted () {
     this.player.on('event', () => console.log('event fired'))
-  },
-  {
-    player () { return this.$refs.plyr.player }
   }
 </script>
-```
+``
 
 The other way is to just pass an array of the
 events you want emitted.
@@ -139,21 +151,20 @@ events you want emitted.
 ```
 
 ## Options
-
 For custom options you can pass an `options` prop which is an object
 that will be passed to the `new Plyr()` creation. Available options
 [here](https://github.com/sampotts/plyr#options). I added an additional
 option (`hideYouTubeDOMError`) that hides the error that is always
 logged when destroying a YouTube player. It defaults to `true`, and you
-can disable it to see the error by setting it to false.
+can disable it and see the error by setting it to false.
 
 ## SSR
-
-This should support SSR out of the box. For nuxt, create a file called `vue-plyr.js` in your plugins folder containing
-only the three lines:
+### Nuxt
+This should support SSR out of the box. For [nuxt](https://nuxtjs.org/), create a file called `vue-plyr.js` in your plugins folder containing
+only these three statements:
 ```js
 import Vue from 'vue'
-import VuePlyr from 'vue-plyr'
+import VuePlyr from 'vue-plyr/dist/vue-plyr.ssr.js'
 
 // The second argument is the default config values which can be omitted.
 Vue.use(VuePlyr, {
@@ -163,10 +174,7 @@ Vue.use(VuePlyr, {
   emit: ['ended']
 })
 ```
-
-Then, in your `nuxt.config.js` file add `'~/plugins/vue-plyr'` to the plugins array. The `vue-plyr` element should be globally registered now. I might add a nuxt config file to the package at some point in the future so that you do not have to create the file yourself, but currently you have to make it manually.
-
-You will also want to add `vue-plyr/dist/vue-plyr.css` to your css array in the same file.
+Then, in your `nuxt.config.js` file add `'~/plugins/vue-plyr'` to the plugins array. The `vue-plyr` element should be globally registered now.
 
 The `nuxt.config.js` file should at minimum include this:
 ```js
@@ -177,6 +185,15 @@ export default {
 }
 ```
 
-## Author
+Alternatively, you can use the provided plugin file (contents are exactly as above) like this:
+```js
+// nuxt.config.js
+export default {
+  plugins: [
+    'vue-plyr/extra/nuxt/vue-plyr.plugin.js'
+  ]
+}
+```
 
+## Author
 **vue-plyr** © [RedXTech](https://github.com/redxtech), Released under the [MIT](./LICENSE.md) License.

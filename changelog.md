@@ -1,6 +1,11 @@
 # Changelog
 
-#### 6.0.0
+#### 6.0.1
+- Fix `vue-runtime-helper` being a dependency.
+- Reorganize exports (yeah breaking but I honestly don't want to bump the version again).
+- Add nuxt plugin file.
+
+### 6.0.0
 - Change import to be more natural.
 - Move to esm export.
 - Change demo.
