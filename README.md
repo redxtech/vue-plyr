@@ -12,7 +12,7 @@ enhancement), and Vimeo (div & progressive enhancement).
 
 ## Installation
 ```bash
-yarn add vue-plyr # or npm i vue-plyr
+yarn add vue-plyr plyr # or npm i vue-plyr plyr
 ```
 
 ### Module
@@ -39,6 +39,7 @@ In the browser you can include it as you would any other package: with unpkg.
 ```html
 <script type="text/javascript" src="https://unpkg.com/vue"></script>
 <script type="text/javascript" src="https://unpkg.com/vue-plyr"></script>
+<script type="text/javascript" src="https://unpkg.com/plyr"></script>
 ```
 
 ## Usage
@@ -176,11 +177,16 @@ Vue.use(VuePlyr, {
 ```
 Then, in your `nuxt.config.js` file add `'~/plugins/vue-plyr'` to the plugins array. The `vue-plyr` element should be globally registered now.
 
+You will also want to add vue-plyr/dist/vue-plyr.css to your css array in the same file.
+
 The `nuxt.config.js` file should at minimum include this:
 ```js
 export default {
   plugins: [
     '~/plugins/vue-plyr'
+  ],
+  css: [
+    'vue-plyr/dist/vue-plyr.css'
   ]
 }
 ```

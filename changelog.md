@@ -1,7 +1,7 @@
 # Changelog
 
 #### 6.0.1
-- Fix `vue-runtime-helper` being a dependency.
+- Fix `vue-runtime-helper` being a dependency by bundling it.
 - Reorganize exports (yeah breaking but I honestly don't want to bump the version again).
 - Add nuxt plugin file.
 
