@@ -1,6 +1,5 @@
 import vue from 'rollup-plugin-vue'
 import resolve from 'rollup-plugin-node-resolve'
-import copy from 'rollup-plugin-copy'
 import pkg from './package.json'
 
 // default config options
@@ -35,14 +34,6 @@ export default [
         template: {
           optimizeSSR: true
         }
-      }),
-      copy({
-        targets: [
-          {
-            src: './src/extra/nuxt/vue-plyr.plugin.js',
-            dest: './dist/extra/nuxt/vue-plyr.plugin.js'
-          }
-        ]
       })
     ],
     output: {

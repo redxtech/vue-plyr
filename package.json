@@ -1,6 +1,6 @@
 {
   "name": "vue-plyr",
-  "version": "6.0.3",
+  "version": "6.0.4",
   "description": "A vue component for the plyr video & audio player.",
   "license": "MIT",
   "author": {
@@ -50,7 +50,6 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "rollup": "^1.27.0",
-    "rollup-plugin-copy": "^3.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-vue": "^5.1.2",
     "vue-template-compiler": "^2.6.10"

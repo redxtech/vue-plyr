@@ -1,5 +1,5 @@
 # vue-plyr
->v6.0.3 - [Changelog](https://github.com/redxtech/vue-plyr/blob/master/changelog.md)
+>v6.0.4 - [Changelog](https://github.com/redxtech/vue-plyr/blob/master/changelog.md)
 
 A vue component for the plyr video & audio player.
 
@@ -187,16 +187,6 @@ export default {
   ],
   css: [
     'plyr/dist/plyr.css'
-  ]
-}
-```
-
-Alternatively, you can use the provided plugin file (contents are exactly as above) like this:
-```js
-// nuxt.config.js
-export default {
-  plugins: [
-    'vue-plyr/extra/nuxt/vue-plyr.plugin.js'
   ]
 }
 ```

@@ -1,5 +1,8 @@
 # Changelog
 
+#### 6.0.4
+- Remove useless nuxt plugin.
+
 #### 6.0.3
 - Update docs.
 - Bump version number.
