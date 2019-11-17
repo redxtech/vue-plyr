@@ -28,8 +28,14 @@ export default [
     // SSR module
     ...config,
     plugins: [
-      ...config.plugins,
-      vue({ template: { optimizeSSR: true } }),
+      resolve({
+        only: ['vue-runtime-helpers']
+      }),
+      vue({
+        template: {
+          optimizeSSR: true
+        }
+      }),
       copy({
         targets: [
           {
@@ -40,8 +46,8 @@ export default [
       })
     ],
     output: {
-      file: pkg.main,
-      format: 'esm'
+      file: pkg.ssr,
+      format: 'cjs'
     }
   },
   {

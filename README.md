@@ -177,7 +177,7 @@ Vue.use(VuePlyr, {
 ```
 Then, in your `nuxt.config.js` file add `'~/plugins/vue-plyr'` to the plugins array. The `vue-plyr` element should be globally registered now.
 
-You will also want to add vue-plyr/dist/vue-plyr.css to your css array in the same file.
+You will also want to add `plyr/dist/plyr.css` to your css array in the same file.
 
 The `nuxt.config.js` file should at minimum include this:
 ```js
@@ -186,7 +186,7 @@ export default {
     '~/plugins/vue-plyr'
   ],
   css: [
-    'vue-plyr/dist/vue-plyr.css'
+    'plyr/dist/plyr.css'
   ]
 }
 ```

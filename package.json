@@ -14,10 +14,11 @@
     "build": "rollup -c",
     "lint": "vue-cli-service lint"
   },
-  "main": "./dist/vue-plyr.ssr.mjs",
+  "main": "./dist/vue-plyr.mjs",
   "module": "./dist/vue-plyr.mjs",
   "jsnext:main": "./dist/vue-plyr.mjs",
   "unpkg": "./dist/vue-plyr.js",
+  "ssr": "./dist/vue-plyr.ssr.js",
   "files": [
     "dist"
   ],
