@@ -1,5 +1,5 @@
 # vue-plyr
->v6.0.1 - [Changelog](https://github.com/redxtech/vue-plyr/blob/master/changelog.md)
+>v6.0.3 - [Changelog](https://github.com/redxtech/vue-plyr/blob/master/changelog.md)
 
 A vue component for the plyr video & audio player.
 
