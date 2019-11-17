@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
-// import VuePlyr from '../src/main'
-import VuePlyr from '../dist/vue-plyr'
+import VuePlyr from '../src/main'
+// import VuePlyr from '../dist/vue-plyr.mjs'
 
 Vue.config.productionTip = false
 

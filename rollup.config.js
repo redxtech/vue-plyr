@@ -1,25 +1,28 @@
 import vue from 'rollup-plugin-vue'
 import resolve from 'rollup-plugin-node-resolve'
-import commonjs from 'rollup-plugin-commonjs'
 import copy from 'rollup-plugin-copy'
+import pkg from './package.json'
 
+// default config options
 const config = {
   input: './src/main.js',
   plugins: [
-    vue(),
-    resolve(),
-    commonjs()
-  ]
+    resolve({
+      only: ['vue-runtime-helpers']
+    }),
+    vue()
+  ],
+  output: {
+    file: pkg.module,
+    format: 'esm'
+  },
+  external: ['plyr']
 }
 
 export default [
   {
     // ESM module
-    ...config,
-    output: {
-      file: './dist/vue-plyr.esm.js',
-      format: 'esm'
-    }
+    ...config
   },
   {
     // SSR module
@@ -37,17 +40,20 @@ export default [
       })
     ],
     output: {
-      format: 'esm',
-      file: './dist/vue-plyr.ssr.js'
+      file: pkg.main,
+      format: 'esm'
     }
   },
   {
     // Browser build
     ...config,
     output: {
+      file: pkg.unpkg,
       format: 'iife',
-      file: './dist/vue-plyr.js',
-      name: 'VuePlyr'
+      name: 'VuePlyr',
+      globals: {
+        plyr: 'Plyr'
+      }
     }
   }
 ]
