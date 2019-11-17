@@ -1,0 +1,23 @@
+{
+  "name": "vue-plyr-nuxt",
+  "version": "1.0.0",
+  "description": "An example of how to use vue-plyr with nuxt.",
+  "author": "Gabe Dunn",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "build": "nuxt build",
+    "start": "cross-env NODE_ENV=production node server/index.js",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "koa": "^2.6.2",
+    "nuxt": "^2.0.0",
+    "plyr": "^3.5.6",
+    "vue-plyr": "^6.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
