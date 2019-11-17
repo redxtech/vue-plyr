@@ -21,7 +21,7 @@ yarn add vue-plyr plyr # or npm i vue-plyr plyr
 import Vue from 'vue'
 import VuePlyr from 'vue-plyr'
 
-// The second argument is the default config values which can be omitted.
+// The second argument is optional and sets the default config values for every player.
 Vue.use(VuePlyr, {
   plyr: {
     fullscreen: { enabled: false }
@@ -30,7 +30,7 @@ Vue.use(VuePlyr, {
 })
 ```
 
-### SSR [(more below)](#SSR)
+### SSR [(more below)](#ssr)
 For SSR you can import the SSR optimized module, found at `./dist/vue-plyr.ssr.js`.
 There is a more in depth description on how to use it with [nuxt](#nuxt) below.
 
@@ -167,7 +167,7 @@ only these three statements:
 import Vue from 'vue'
 import VuePlyr from 'vue-plyr/dist/vue-plyr.ssr.js'
 
-// The second argument is the default config values which can be omitted.
+// The second argument is optional and sets the default config values for every player.
 Vue.use(VuePlyr, {
   plyr: {
     fullscreen: { enabled: false }

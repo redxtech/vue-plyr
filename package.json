@@ -37,7 +37,6 @@
     "rollup"
   ],
   "dependencies": {
-    "core-js": "^3.3.2",
     "plyr": "^3.5.6",
     "vue": "^2.6.10"
   },
@@ -47,6 +46,7 @@
     "@vue/cli-service": "^4.0.0",
     "@vue/eslint-config-standard": "^4.0.0",
     "babel-eslint": "^10.0.3",
+    "core-js": "^3.4.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "rollup": "^1.27.0",
