@@ -1,0 +1,13 @@
+{
+  "name": "vue-plyr-html",
+  "version": "1.0.0",
+  "description": "An example of how to use vue-plyr with just html.",
+  "author": "Gabe Dunn",
+  "private": true,
+  "scripts": {
+    "start": "serve ."
+  },
+  "dependencies": {
+    "serve": "^11.2.0"
+  }
+}
