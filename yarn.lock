@@ -946,11 +946,11 @@
     webpack "^4.0.0"
 
 "@vue/cli-plugin-eslint@^4.0.0":
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-eslint/-/cli-plugin-eslint-4.0.5.tgz#f23f46478b5e7a40ba55f6ba1bb11dbec49c45ba"
-  integrity sha512-hiPU2+knz3GgSUDniekbp81Iciax9yIFzz1swy1QTJGABXT/3gqakz7Gc0IGgpo+wRkMHk9DyCK8+TpI6wdtWg==
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@vue/cli-plugin-eslint/-/cli-plugin-eslint-4.1.1.tgz#ad09b71f94dc7518a6c83debacd39e34f6d5a71e"
+  integrity sha512-7bb5idaWcXREaxVYmQ9NK31gy26Qms6cQ9ENovXQurFpsSd29+Fmqc/EkAhHhWn82gModvypIoJyOhKt21jxKg==
   dependencies:
-    "@vue/cli-shared-utils" "^4.0.5"
+    "@vue/cli-shared-utils" "^4.1.1"
     eslint-loader "^2.1.2"
     globby "^9.2.0"
     webpack "^4.0.0"
