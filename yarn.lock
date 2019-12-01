@@ -1064,10 +1064,10 @@
     source-map "~0.6.1"
     vue-template-es2015-compiler "^1.9.0"
 
-"@vue/component-compiler@^4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@vue/component-compiler/-/component-compiler-4.1.0.tgz#92ccb90e425aa7e61d58bf092a5cfcdd6d0f9315"
-  integrity sha512-20S7mm7CYP94m2Morw2ftz1tqoBu1nX7KYiqo5rlgKPZ0dlY7VZX7wAL/etN3s4HD0PBeenr1pUUCBIgGSaB2g==
+"@vue/component-compiler@^4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@vue/component-compiler/-/component-compiler-4.2.0.tgz#437855cd59f3d713a4eef81bac7ab0f4950977b4"
+  integrity sha512-bxFNxUpKzLfHDoGTsAe2w7gEz4OwII7tp5m7sAXES1DApbpYglH4YSpYxdZRZ4GN/wj2fPD0u72QRJXd4UPvFQ==
   dependencies:
     "@vue/component-compiler-utils" "^3.0.0"
     clean-css "^4.1.11"
@@ -7489,11 +7489,11 @@ rollup-plugin-node-resolve@^5.2.0:
     rollup-pluginutils "^2.8.1"
 
 rollup-plugin-vue@^5.1.2:
-  version "5.1.2"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-vue/-/rollup-plugin-vue-5.1.2.tgz#12db23dd59292f89e99bab1d5d2d958658f850e2"
-  integrity sha512-j0tKshZOoiUq/f/c2k8l8+QRGZRqnH/iJtQsYoK5fNQwxwhOS3rbOu0FA0hx6IdnLZmXInmuAq1aTHY14N87WA==
+  version "5.1.4"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-vue/-/rollup-plugin-vue-5.1.4.tgz#d1892cbb18e9a2224e2dfabcbccf4707186e02eb"
+  integrity sha512-caXDQkq1yn8+wgRF1sO7IftFtHwKxiOsbB507UHaPDvCLihll/H9683io85k51txbLO9AfdGFN4aMH0nGVOZfw==
   dependencies:
-    "@vue/component-compiler" "^4.1.0"
+    "@vue/component-compiler" "^4.2.0"
     "@vue/component-compiler-utils" "^3.0.0"
     debug "^4.1.1"
     hash-sum "^1.0.2"
