@@ -104,7 +104,7 @@ To access the player instance, you can use the `refs` attribute.
 <script>
 export default {
   name: 'Component',
-  computed () {
+  computed: {
     player () {
       return this.$refs.plyr.player
     }
@@ -133,7 +133,7 @@ Valid events are [here](https://github.com/sampotts/plyr#events).
 <script>
 export default {
   name: 'Component',
-  computed () {
+  computed: {
     player () {
       return this.$refs.plyr.player
     }
