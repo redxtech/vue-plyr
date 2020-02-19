@@ -15,10 +15,14 @@
     "lint": "vue-cli-service lint"
   },
   "main": "./dist/vue-plyr.mjs",
+  "mainPolyfilled": "./dist/vue-plyr-polyfilled.mjs",
   "module": "./dist/vue-plyr.mjs",
+  "modulePolyfilled": "./dist/vue-plyr-polyfilled.mjs",
   "jsnext:main": "./dist/vue-plyr.mjs",
   "unpkg": "./dist/vue-plyr.js",
+  "unpkgPolyfilled": "./dist/vue-plyr-polyfilled.js",
   "ssr": "./dist/vue-plyr.ssr.js",
+  "ssrPolyfilled": "./dist/vue-plyr-polyfilled.ssr.js",
   "files": [
     "dist"
   ],
