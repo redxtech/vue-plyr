@@ -32,7 +32,7 @@ Vue.use(VuePlyr, {
 
 ### Polyfilled Version
 You can change the import for VuePlyr to the below to get the Plyr Polyfilled version (IE11).
-```
+```js
 import VuePlyr from 'vue-plyr/dist/vue-plyr-polyfilled.js'
 ```
 
