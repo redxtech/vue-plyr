@@ -30,6 +30,12 @@ Vue.use(VuePlyr, {
 })
 ```
 
+### Polyfilled Version
+You can change the import for VuePlyr to the below to get the Plyr Polyfilled version (IE11).
+```
+import VuePlyr from 'vue-plyr/dist/vue-plyr-polyfilled.js'
+```
+
 ### SSR [(more below)](#ssr)
 For SSR you can import the SSR optimized module, found at `./dist/vue-plyr.ssr.js`.
 There is a more in depth description on how to use it with [nuxt](#nuxt) below.
