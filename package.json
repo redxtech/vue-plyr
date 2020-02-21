@@ -2,13 +2,11 @@
   "name": "vue-plyr",
   "version": "6.0.4",
   "description": "A vue component for the plyr video & audio player.",
-  "license": "MIT",
   "author": {
     "name": "Gabe Dunn",
     "email": "gabe@redxtech.ca",
     "url": "https://gabedunn.dev"
   },
-  "repository": "github:redxtech/vue-plyr",
   "scripts": {
     "serve": "vue-cli-service serve ./demo/main.js",
     "build": "rollup -c",
@@ -16,12 +14,29 @@
   },
   "main": "./dist/vue-plyr.mjs",
   "module": "./dist/vue-plyr.mjs",
-  "jsnext:main": "./dist/vue-plyr.mjs",
   "unpkg": "./dist/vue-plyr.js",
-  "ssr": "./dist/vue-plyr.ssr.js",
   "files": [
     "dist"
   ],
+  "dependencies": {
+    "plyr": "^3.5.6",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.2.2",
+    "@vue/cli-plugin-eslint": "~4.2.2",
+    "@vue/cli-service": "~4.2.2",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.3",
+    "core-js": "^3.4.1",
+    "eslint": "^6.8.0",
+    "eslint-plugin-vue": "^6.0.1",
+    "rollup": "^1.27.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-vue": "^5.1.2",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "jsnext:main": "./dist/vue-plyr.mjs",
   "keywords": [
     "vue-plyr",
     "vue",
@@ -36,22 +51,7 @@
     "javascript",
     "rollup"
   ],
-  "dependencies": {
-    "plyr": "^3.5.6",
-    "vue": "^2.6.10"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.0.0",
-    "@vue/cli-plugin-eslint": "^4.0.0",
-    "@vue/cli-service": "^4.0.0",
-    "@vue/eslint-config-standard": "^4.0.0",
-    "babel-eslint": "^10.0.3",
-    "core-js": "^3.4.1",
-    "eslint": "^6.8.0",
-    "eslint-plugin-vue": "^6.0.1",
-    "rollup": "^1.27.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-vue": "^5.1.2",
-    "vue-template-compiler": "^2.6.10"
-  }
+  "license": "MIT",
+  "repository": "github:redxtech/vue-plyr",
+  "ssr": "./dist/vue-plyr.ssr.js"
 }
