@@ -142,7 +142,7 @@ export default {
     this.player.on('event', () => console.log('event fired'))
   }
 </script>
-``
+```
 
 The other way is to just pass an array of the
 events you want emitted.
