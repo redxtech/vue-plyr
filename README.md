@@ -38,8 +38,8 @@ There is a more in depth description on how to use it with [nuxt](#nuxt) below.
 In the browser you can include it as you would any other package: with unpkg.
 ```html
 <script type="text/javascript" src="https://unpkg.com/vue"></script>
-<script type="text/javascript" src="https://unpkg.com/vue-plyr"></script>
 <script type="text/javascript" src="https://unpkg.com/plyr"></script>
+<script type="text/javascript" src="https://unpkg.com/vue-plyr"></script>
 ```
 
 ## Usage
