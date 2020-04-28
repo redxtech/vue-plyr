@@ -19,7 +19,7 @@
     "dist"
   ],
   "dependencies": {
-    "plyr": "^3.5.10",
+    "plyr": "~3.5.10",
     "vue": "^2.6.11"
   },
   "devDependencies": {
