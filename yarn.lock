@@ -1322,7 +1322,7 @@
     webpack-dev-server "^3.11.0"
     webpack-merge "^4.2.2"
 
-"@vue/cli-shared-utils@^4.3.1", "@vue/cli-shared-utils@^4.4.6":
+"@vue/cli-shared-utils@^4.4.6":
   version "4.4.6"
   resolved "https://registry.yarnpkg.com/@vue/cli-shared-utils/-/cli-shared-utils-4.4.6.tgz#0ec59880920736c6dd79079ac0b5ceac29fa55e1"
   integrity sha512-ba+FZZCjiTSu2otnLjY4qXqASe7ZIQ/QBljk5oRPgqrR0p1NUkDPUcZhqa041aOaSW1yAfSfhOD7Q84nMnWhzQ==
@@ -6688,15 +6688,15 @@ pkg-up@^2.0.0:
   dependencies:
     find-up "^2.1.0"
 
-plyr@^3.5.10:
-  version "3.6.2"
-  resolved "https://registry.yarnpkg.com/plyr/-/plyr-3.6.2.tgz#5a55b608acd161262de1cc75ca843aa64355a051"
-  integrity sha512-CjAhRDtzyGqMRte9Phj4FsZFegS9VxW60boOhQsAnZHuiFG3yVBRcodWsGZ79GuXHHelc4DxMHO+z0QggY+9qQ==
+plyr@~3.5.10:
+  version "3.5.10"
+  resolved "https://registry.yarnpkg.com/plyr/-/plyr-3.5.10.tgz#631fb379135abd17ea822817db3046b484c8166c"
+  integrity sha512-wbbSuzk3yKVOmYWQUnxG1bxikqZNkxZmL3OjS1DFVU0D2Uko1evGY72LuD9rm/HnNCNzcTuc0c6MCn7bRRpUTA==
   dependencies:
-    core-js "^3.6.5"
+    core-js "^3.6.4"
     custom-event-polyfill "^1.0.7"
     loadjs "^4.2.0"
-    rangetouch "^2.0.1"
+    rangetouch "^2.0.0"
     url-polyfill "^1.1.8"
 
 pnp-webpack-plugin@^1.6.4:
@@ -7419,7 +7419,7 @@ range-parser@^1.2.1, range-parser@~1.2.1:
   resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.1.tgz#3cf37023d199e1c24d1a55b84800c2f3e6468031"
   integrity sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==
 
-rangetouch@^2.0.1:
+rangetouch@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/rangetouch/-/rangetouch-2.0.1.tgz#c01105110fd3afca2adcb1a580692837d883cb70"
   integrity sha512-sln+pNSc8NGaHoLzwNBssFSf/rSYkqeBXzX1AtJlkJiUaVSJSbRAWJk+4omsXkN+EJalzkZhWQ3th1m0FpR5xA==
@@ -7849,9 +7849,9 @@ rollup-pluginutils@^2.8.1, rollup-pluginutils@^2.8.2:
     estree-walker "^0.6.1"
 
 rollup@^2.19.0:
-  version "2.19.0"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.19.0.tgz#6484868882281552b0dc33aa5bc5b36a9c920452"
-  integrity sha512-nny5Vs4jwY3vbQAXgOyU4ZDZqLvMKm/umnsVry/demVL6ve8ke1XhdpYE0eiWencASmx/qFPw6pP8P7MLJl9XA==
+  version "2.32.0"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.32.0.tgz#ac58c8e85782bea8aa2d440fc05aba345013582a"
+  integrity sha512-0FIG1jY88uhCP2yP4CfvtKEqPDRmsUwfY1kEOOM+DH/KOGATgaIFd/is1+fQOxsvh62ELzcFfKonwKWnHhrqmw==
   optionalDependencies:
     fsevents "~2.1.2"
 
