@@ -17,12 +17,6 @@
         default () {
           return {}
         }
-      },
-      /** Array of events to emit from the plyr object **/
-      emit: {
-        type: Array,
-        required: false,
-        default () { return [] }
       }
     },
     data () {
@@ -33,7 +27,7 @@
     computed: {
       opts () {
         const options = this.options
-        if (!this.options.hasOwnProperty('hideYouTubeDOMError')) {
+        if (!Object.prototype.hasOwnProperty.call(this.options, 'hideYouTubeDOMError')) {
           options.hideYouTubeDOMError = true
         }
         return options
@@ -41,9 +35,6 @@
     },
     mounted () {
       this.player = new Plyr(this.$el.firstChild, this.opts)
-      this.emit.forEach(element => {
-        this.player.on(element, this.emitPlayerEvent)
-      })
     },
     beforeDestroy () {
       try {
@@ -53,11 +44,6 @@
           // eslint-disable-next-line no-console
           console.error(e)
         }
-      }
-    },
-    methods: {
-      emitPlayerEvent (event) {
-        this.$emit(event.type, event)
       }
     }
   }
