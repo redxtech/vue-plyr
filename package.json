@@ -2,21 +2,25 @@
   "name": "vue-plyr",
   "version": "6.0.4",
   "description": "A vue component for the plyr video & audio player.",
+  "license": "MIT",
   "author": {
     "name": "Gabe Dunn",
     "email": "gabe@redxtech.ca",
     "url": "https://gabedunn.dev"
   },
+  "repository": "github:redxtech/vue-plyr",
   "scripts": {
     "serve": "vue-cli-service serve ./demo/main.js",
     "build": "rollup -c",
     "lint": "vue-cli-service lint"
   },
-  "main": "./dist/vue-plyr.mjs",
-  "module": "./dist/vue-plyr.mjs",
-  "unpkg": "./dist/vue-plyr.js",
+  "main": "dist/vue-plyr.ssr.js",
+  "module": "dist/vue-plyr.esm.js",
+  "unpkg": "dist/vue-plyr.min.js",
+  "style": "dist/vue-plyr.css",
   "files": [
-    "dist"
+    "dist/*",
+    "src/**/*.vue"
   ],
   "dependencies": {
     "plyr": "~3.5.10",
@@ -36,7 +40,6 @@
     "rollup-plugin-vue": "^5.1.6",
     "vue-template-compiler": "^2.6.11"
   },
-  "jsnext:main": "./dist/vue-plyr.mjs",
   "keywords": [
     "vue-plyr",
     "vue",
@@ -50,8 +53,5 @@
     "js",
     "javascript",
     "rollup"
-  ],
-  "license": "MIT",
-  "repository": "github:redxtech/vue-plyr",
-  "ssr": "./dist/vue-plyr.ssr.js"
+  ]
 }
