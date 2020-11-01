@@ -1,13 +1,14 @@
-import VuePlyr from './VuePlyr.vue'
+import VuePlyr from './vue-plyr.vue'
 
-VuePlyr.install = (Vue, options = {}) => {
+VuePlyr.install = (app, options = {}) => {
   if (options.plyr) {
     VuePlyr.props.options.default = () => { return { ...options.plyr } }
   }
   if (options.emit) {
     VuePlyr.props.emit.default = () => { return [...options.emit] }
   }
-  Vue.component(VuePlyr.name, VuePlyr)
+
+  app.component(VuePlyr.name, VuePlyr)
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
