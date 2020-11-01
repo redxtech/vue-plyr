@@ -1,5 +1,5 @@
 import vue from 'rollup-plugin-vue'
-import buble from '@rollup/plugin-buble'
+import babel from '@rollup/plugin-babel'
 import commonjs from '@rollup/plugin-commonjs'
 import replace from '@rollup/plugin-replace'
 import { terser } from 'rollup-plugin-terser'
@@ -27,11 +27,7 @@ const baseConfig = {
       }
     },
     postVue: [
-      buble({
-        transforms: {
-          dangerousForOf: true
-        }
-      })
+      babel({ babelHelpers: 'runtime' })
     ]
   }
 }
