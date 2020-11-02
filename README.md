@@ -45,7 +45,7 @@ with the stylesheet.
 
 <!-- You will also need to install the component during app creation -->
 <script>
-  window.Vue.createApp({}).mount('#app')
+  window.Vue.createApp(VuePlyr).mount('#app')
 </script>
 ```
 
