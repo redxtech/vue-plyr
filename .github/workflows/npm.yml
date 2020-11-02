@@ -20,9 +20,7 @@ jobs:
         run: npm run lint
 
       - name: Test and build package
-        run: |
-#          npm test
-          npm run build
+        run: npm run build
 
       - name: Publish tag to npm
         if: contains(github.ref, 'tags')
