@@ -23,10 +23,10 @@
   <h1>Video Player</h1>
   <vue-plyr>
     <video
+      controls
       crossorigin
       playsinline
-      poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg"
-      src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
+      data-poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg"
     >
       <source
         size="576"
@@ -46,19 +46,19 @@
       <track
         default
         kind="captions"
-        label="English"
+        label="English captions"
         src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
         srclang="en"
       >
       <track
         kind="captions"
-        label="Français"
+        label="Légendes en français"
         src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt"
         srclang="fr"
       >
       <a
         download=""
-        href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
+        href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
       >
         Download
       </a>
@@ -126,7 +126,7 @@
 <script src="https://unpkg.com/vue@next"></script>
 <script src="./node_modules/vue-plyr/dist/vue-plyr.min.js"></script>
 <script>
-  Vue.createApp({}).use(VuePlyr).mount('#app')
+  Vue.createApp({}).use(VuePlyr, { plyr: { quality: { default: '1080p' }}}).mount('#app')
 </script>
 </body>
 </html>
