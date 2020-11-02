@@ -15,10 +15,8 @@ jobs:
         run: yarn install
       - name: Lint code
         run: yarn lint
-      - name: Test and build package
-        run: |
-          - yarn test
-          - yarn build
+      - name: Build package
+        run: yarn build
       - name: Publish to NPM
         run: yarn publish
         env:
