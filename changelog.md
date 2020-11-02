@@ -1,5 +1,11 @@
 # Changelog
 
+#### 7.0.0-rc.1
+- Vue 3 support
+- Removed `emit` option.
+- Completely redid the bundling process.
+- Updated examples.
+
 #### 6.0.4
 - Remove useless nuxt plugin.
 
