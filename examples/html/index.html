@@ -1,17 +1,22 @@
 <!DOCTYPE html>
+<!--suppress HtmlUnknownTag,TypeScriptUMDGlobal,JSUnresolvedFunction -->
 <html>
 <head>
   <title>vue-plyr-html</title>
   <style>
-    #app {
-      font-family: 'Avenir', Helvetica, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-align: center;
-      color: #2c3e50;
-      margin-top: 60px;
-    }
+      #app {
+          font-family: 'Avenir', Helvetica, Arial, sans-serif;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          text-align: center;
+          color: #2c3e50;
+      }
+
+      h1 {
+          margin: 3rem;
+      }
   </style>
+  <link rel="stylesheet" href="./node_modules/vue-plyr/dist/vue-plyr.css">
 </head>
 <body>
 <div id="app">
@@ -118,13 +123,10 @@
     ></div>
   </vue-plyr>
 </div>
-<script src="https://unpkg.com/vue"></script>
-<script src="https://unpkg.com/plyr"></script>
-<script src="https://unpkg.com/vue-plyr"></script>
+<script src="https://unpkg.com/vue@next"></script>
+<script src="./node_modules/vue-plyr/dist/vue-plyr.min.js"></script>
 <script>
-  new Vue({
-    el: '#app'
-  })
+  Vue.createApp({}).use(VuePlyr).mount('#app')
 </script>
 </body>
 </html>
