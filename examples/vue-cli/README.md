@@ -1,4 +1,4 @@
-# vue-plyr-cli
+# cli
 
 ## Project setup
 ```
@@ -13,11 +13,6 @@ yarn serve
 ### Compiles and minifies for production
 ```
 yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
 ```
 
 ### Customize configuration
