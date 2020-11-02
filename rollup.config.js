@@ -18,7 +18,10 @@ const baseConfig = {
 			replace({
 				'process.env.NODE_ENV': JSON.stringify('production')
 			}),
-			commonjs()
+			commonjs(),
+			css({
+				output: pkg.style
+			})
 		],
 		vue: {
 			css: true,
@@ -43,9 +46,6 @@ if (!argv.format || argv.format === 'es') {
 		},
 		plugins: [
 			...baseConfig.plugins.preVue,
-			css({
-				output: pkg.style
-			}),
 			vue({
 				...baseConfig.plugins.vue,
 				css: false
@@ -75,9 +75,6 @@ if (!argv.format || argv.format === 'cjs') {
 		},
 		plugins: [
 			...baseConfig.plugins.preVue,
-			css({
-				output: pkg.style
-			}),
 			vue({
 				...baseConfig.plugins.vue,
 				template: {
@@ -101,7 +98,6 @@ if (!argv.format || argv.format === 'iife') {
 			file: pkg.unpkg,
 			format: 'iife',
 			name: 'VuePlyr',
-			exports: 'named',
 			sourcemap: true
 		},
 		plugins: [
