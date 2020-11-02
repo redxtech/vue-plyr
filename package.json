@@ -30,7 +30,7 @@
     "src/**/*.vue"
   ],
   "dependencies": {
-    "plyr": "^3.6.2",
+    "plyr": "github:sampotts/plyr#develop",
     "vue": "^2.6.12"
   },
   "devDependencies": {

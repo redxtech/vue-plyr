@@ -42,6 +42,11 @@ with the stylesheet.
 <script type="text/javascript" src="https://unpkg.com/vue"></script>
 <script type="text/javascript" src="https://unpkg.com/vue-plyr"></script>
 <link rel="stylesheet" href="https://unpkg.com/vue-plyr/dist/vue-plyr.css" />
+
+<!-- You will also need to install the component during app creation -->
+<script>
+  window.Vue.createApp({}).mount('#app')
+</script>
 ```
 
 ## Usage
