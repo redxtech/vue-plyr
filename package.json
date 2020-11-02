@@ -13,8 +13,11 @@
     "prebuild": "rm -rf dist/",
     "build": "NODE_ENV=production rollup --c rollup.config.js",
     "build:es": "NODE_ENV=production rollup --c rollup.config.js --format=es",
+    "build:es:watch": "NODE_ENV=production rollup --c rollup.config.js --format=es --watch",
     "build:cjs": "NODE_ENV=production rollup --c rollup.config.js --format=cjs",
+    "build:cjs:watch": "NODE_ENV=production rollup --c rollup.config.js --format=cjs --watch",
     "build:iife": "NODE_ENV=production rollup --c rollup.config.js --format=iife",
+    "build:iife:watch": "NODE_ENV=production rollup --c rollup.config.js --format=iife --watch",
     "serve": "vue-cli-service serve ./demo/main.js",
     "lint": "vue-cli-service lint -f pretty"
   },
