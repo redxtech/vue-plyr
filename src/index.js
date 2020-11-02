@@ -10,8 +10,4 @@ VuePlyr.install = (app, options = {}) => {
 	app.component(VuePlyr.name, VuePlyr)
 }
 
-if (typeof window !== 'undefined' && window.Vue) {
-	window.Vue.use(VuePlyr)
-}
-
 export default VuePlyr

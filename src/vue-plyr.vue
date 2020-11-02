@@ -1,11 +1,6 @@
-<template>
-	<div>
-		<slot />
-	</div>
-</template>
-
 <script>
 	import Plyr from 'plyr'
+	import 'plyr/dist/plyr.css'
 
 	export default {
 		name: 'VuePlyr',
@@ -39,7 +34,7 @@
 			}
 		},
 		mounted() {
-			this.player = new Plyr(this.$el.firstChild, this.opts)
+			this.player = new Plyr(this.$el, this.opts)
 		},
 		beforeUnmount() {
 			try {
@@ -55,8 +50,9 @@
 					console.error(e)
 				}
 			}
+		},
+		render() {
+			return this.$slots.default()[0]
 		}
 	}
 </script>
-
-<style src="../node_modules/plyr/dist/plyr.css"></style>
