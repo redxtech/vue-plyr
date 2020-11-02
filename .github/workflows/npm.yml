@@ -6,24 +6,27 @@ jobs:
   npm:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2-beta
         with:
-          node-version: '10.x'
+          node-version: '15.x'
           registry-url: 'https://registry.npmjs.org'
-
-      - name: Install npm dependencies
-        run: npm ci
-
+      - name: Install dependencies
+        run: yarn install
       - name: Lint code
-        run: npm run lint
-
+        run: yarn lint
       - name: Test and build package
-        run: npm run build
-
-      - name: Publish tag to npm
-        if: contains(github.ref, 'tags')
-        run: npm publish
+        run: |
+          - yarn test
+          - yarn build
+      - name: Publish to NPM
+        run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+      - uses: actions/setup-node@v1
+        with:
+          registry-url: 'https://npm.pkg.github.com'
+      - name: Publish to GPM
+        run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GH_AUTH_TOKEN }}

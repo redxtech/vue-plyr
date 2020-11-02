@@ -1,6 +1,6 @@
 # Changelog
 
-#### 7.0.0-rc.1
+#### 7.0.0-beta.1
 - Vue 3 support
 - Removed `emit` option.
 - Completely redid the bundling process.
