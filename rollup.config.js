@@ -101,6 +101,11 @@ if (!argv.format || argv.format === 'iife') {
 			sourcemap: true
 		},
 		plugins: [
+			replace({
+				"import Plyr from 'plyr'":
+					"import Plyr from 'plyr/dist/plyr.polyfilled'",
+				delimiters: ['', '']
+			}),
 			...baseConfig.plugins.preVue,
 			vue(baseConfig.plugins.vue),
 			...baseConfig.plugins.postVue,
