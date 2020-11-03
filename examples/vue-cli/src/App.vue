@@ -1,14 +1,14 @@
 <template>
-	<elements />
+	<demo />
 </template>
 
 <script>
-	import Elements from '../../shared/elements'
+	import Demo from '../../shared/demo'
 
 	export default {
 		name: 'App',
 		components: {
-			Elements
+			Demo
 		}
 	}
 </script>
