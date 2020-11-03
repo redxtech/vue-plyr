@@ -1,11 +1,15 @@
 # Changelog
 
-#### 7.0.0-beta.1
-- Vue 3 support
+#### 7.0.0
+- Vue 3 support.
+- Updated plyr version.
 - Removed `emit` option.
+- Removed unnecessary `<div>` wrapper for components.
 - Completely redid the bundling process.
-- Updated examples.
-- Added polyfilled versions.
+  - Added polyfilled versions.
+- Updated examples and added some more of them.
+- Some other things.
+- Maybe some other small thi ngs I've forgotten about.
 
 #### 6.0.4
 - Remove useless nuxt plugin.
