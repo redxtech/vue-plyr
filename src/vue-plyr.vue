@@ -52,7 +52,8 @@
 			}
 		},
 		render() {
-			return this.$slots.default()[0]
+			const slots = this.$slots.default
+			return typeof slots === 'function' ? slots()[0] : slots
 		}
 	}
 </script>
