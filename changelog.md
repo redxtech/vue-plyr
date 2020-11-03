@@ -5,6 +5,7 @@
 - Removed `emit` option.
 - Completely redid the bundling process.
 - Updated examples.
+- Added polyfilled versions.
 
 #### 6.0.4
 - Remove useless nuxt plugin.
