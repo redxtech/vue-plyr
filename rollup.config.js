@@ -5,6 +5,7 @@ import replace from '@rollup/plugin-replace'
 import { terser } from 'rollup-plugin-terser'
 import resolve from '@rollup/plugin-node-resolve'
 import css from 'rollup-plugin-css-only'
+import filesize from 'rollup-plugin-filesize'
 import minimist from 'minimist'
 
 import pkg from './package.json'
@@ -29,7 +30,7 @@ const baseConfig = {
 				isProduction: true
 			}
 		},
-		postVue: [babel({ babelHelpers: 'runtime' })]
+		postVue: [babel({ babelHelpers: 'runtime' }), filesize()]
 	}
 }
 
