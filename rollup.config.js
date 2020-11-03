@@ -115,5 +115,38 @@ if (!argv.format || argv.format === 'iife') {
 	buildFormats.push(unpkgConfig)
 }
 
+const copy = obj => {
+	if (!obj) {
+		return obj
+	}
+
+	let v
+	let copied = Array.isArray(obj) ? [] : {}
+	for (const k in obj) {
+		v = obj[k]
+		copied[k] = typeof v === 'object' ? copy(v) : v
+	}
+
+	return copied
+}
+
+if (!argv.format) {
+	buildFormats.forEach(format => {
+		const polyfilled = copy(format)
+		polyfilled.output.file = format.output.file.replace(
+			/vue-plyr\./,
+			'vue-plyr.polyfilled.'
+		)
+		polyfilled.plugins.unshift(
+			replace({
+				"import Plyr from 'plyr'":
+					"import Plyr from 'plyr/dist/plyr.polyfilled'",
+				delimiters: ['', '']
+			})
+		)
+		buildFormats.push(polyfilled)
+	})
+}
+
 // Export config
 export default buildFormats
