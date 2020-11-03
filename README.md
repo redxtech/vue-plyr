@@ -9,6 +9,10 @@ It uses [plyr](https://plyr.io) by [sampotts](https://github.com/sampotts) for t
 
 Supported player types: HTML5 video, HTML5 audio, YouTube, and Vimeo.
 
+### Demo
+A demo of the components (equivalent to the html example include here) can be found at
+[redxtech.github.io/vue-plyr](https://redxtech.github.io/vue-plyr/).
+
 ## Installation
 ```bash
 yarn add vue-plyr # or npm i vue-plyr
