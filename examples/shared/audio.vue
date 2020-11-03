@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h2>Audio Player</h2>
+		<h2>audio player</h2>
 		<vue-plyr>
 			<audio controls crossorigin playsinline>
 				<source

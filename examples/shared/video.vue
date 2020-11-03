@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h2>Video Player</h2>
+		<h2>video player</h2>
 		<vue-plyr :options="options">
 			<video
 				controls

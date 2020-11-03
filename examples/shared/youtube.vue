@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h2>YouTube Embed</h2>
+		<h2>youtube embed</h2>
 		<vue-plyr>
 			<div class="plyr__video-embed">
 				<iframe
