@@ -548,8 +548,10 @@ vary@~1.1.2:
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
 
-"vue-plyr@file:../..":
+vue-plyr@^7.0.0-beta.1:
   version "7.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/vue-plyr/-/vue-plyr-7.0.0-beta.1.tgz#da7c37636860090c96a91076e0c25c1d3428dcf7"
+  integrity sha512-RN16XuZcXfIpCsTFsdZrO5IaCyK3H/7bcLq9xdEBpYsWqMZRwyMjTTPjFqclXDa78ZSfpfsVDxZZ4AurtwJwIg==
   dependencies:
     plyr "github:sampotts/plyr#develop"
     vue "^2.6.12"
