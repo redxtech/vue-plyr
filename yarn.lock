@@ -6997,7 +6997,8 @@ plur@^4.0.0:
 
 "plyr@github:sampotts/plyr#develop":
   version "3.6.2"
-  resolved "https://codeload.github.com/sampotts/plyr/tar.gz/5c02205a4f9955f1b8d44f6cc3f9f40f2cc96572"
+  uid e85737d8552c8dbdfe8426952f4676aadddafdd6
+  resolved "https://codeload.github.com/sampotts/plyr/tar.gz/e85737d8552c8dbdfe8426952f4676aadddafdd6"
   dependencies:
     core-js "^3.6.5"
     custom-event-polyfill "^1.0.7"
