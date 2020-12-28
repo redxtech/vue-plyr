@@ -3032,10 +3032,10 @@ core-js-compat@^3.6.2, core-js-compat@^3.6.5:
     browserslist "^4.8.5"
     semver "7.0.0"
 
-core-js@^3.6.5:
-  version "3.6.5"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.6.5.tgz#7395dc273af37fb2e50e9bd3d9fe841285231d1a"
-  integrity sha512-vZVEEwZoIsI+vPEuoF9Iqf5H7/M3eeQqWlQnYa8FSKKePuYTf5MWnxb5SDAzCa60b3JBRS5g9b+Dq7b1y/RCrA==
+core-js@^3.6.5, core-js@^3.7.0:
+  version "3.8.1"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.8.1.tgz#f51523668ac8a294d1285c3b9db44025fda66d47"
+  integrity sha512-9Id2xHY1W7m8hCl8NkhQn5CufmF/WuR30BTRewvCXc1aZd3kMECwNZ69ndLbekKfakw9Rf2Xyc+QR6E7Gg+obg==
 
 core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
@@ -6996,14 +6996,15 @@ plur@^4.0.0:
     irregular-plurals "^3.2.0"
 
 "plyr@github:sampotts/plyr#develop":
-  version "3.6.2"
-  resolved "https://codeload.github.com/sampotts/plyr/tar.gz/5c02205a4f9955f1b8d44f6cc3f9f40f2cc96572"
+  version "3.6.3"
+  uid f00e81a97607350ccc48ff6b83c21c20b199eb12
+  resolved "https://codeload.github.com/sampotts/plyr/tar.gz/f00e81a97607350ccc48ff6b83c21c20b199eb12"
   dependencies:
-    core-js "^3.6.5"
+    core-js "^3.7.0"
     custom-event-polyfill "^1.0.7"
     loadjs "^4.2.0"
     rangetouch "^2.0.1"
-    url-polyfill "^1.1.11"
+    url-polyfill "^1.1.12"
 
 pnp-webpack-plugin@^1.6.4:
   version "1.6.4"
@@ -9074,7 +9075,7 @@ url-parse@^1.4.3:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
 
-url-polyfill@^1.1.11:
+url-polyfill@^1.1.12:
   version "1.1.12"
   resolved "https://registry.yarnpkg.com/url-polyfill/-/url-polyfill-1.1.12.tgz#6cdaa17f6b022841b3aec0bf8dbd87ac0cd33331"
   integrity sha512-mYFmBHCapZjtcNHW0MDq9967t+z4Dmg5CJ0KqysK3+ZbyoNOWQHksGCTWwDhxGXllkWlOc10Xfko6v4a3ucM6A==
