@@ -8,7 +8,7 @@
     "email": "gabe@redxtech.ca",
     "url": "https://gabedunn.dev"
   },
-  "repository": "github:redxtech/vue-plyr",
+  "repository": "github:skjnldsv/vue-plyr",
   "scripts": {
     "prebuild": "rm -rf dist/",
     "build": "NODE_ENV=production rollup --c rollup.config.js",
@@ -30,7 +30,7 @@
   ],
   "dependencies": {
     "plyr": "^3.6.4",
-    "vue": "^2.6.12"
+    "vue": "^3.0.9"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.13.10",
@@ -39,7 +39,7 @@
     "@rollup/plugin-node-resolve": "^10.0.0",
     "@rollup/plugin-replace": "^2.4.2",
     "@vue/cli-plugin-babel": "^4.5.12",
-    "@vue/cli-plugin-eslint": "^4.5.12",
+    "@vue/cli-plugin-eslint": "^5.0.0-alpha.8",
     "@vue/cli-service": "^4.5.12",
     "@vue/compiler-sfc": "^3.0.9",
     "@vue/eslint-config-prettier": "^6.0.0",
