@@ -176,6 +176,7 @@ Valid events are [here](https://github.com/sampotts/plyr#events).
     mounted () {
       this.$refs.plyr.player.on('event', () => console.log('event fired'))
     }
+  }
 </script>
 ```
 
