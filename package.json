@@ -1,6 +1,6 @@
 {
   "name": "@skjnldsv/vue-plyr",
-  "version": "7.0.1-alpha.0",
+  "version": "7.0.1-beta.0",
   "description": "A vue component for the plyr video & audio player.",
   "license": "MIT",
   "author": {
