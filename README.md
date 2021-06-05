@@ -19,7 +19,7 @@ A demo of the components (equivalent to the html example include here) can be fo
 
 ## Installation
 ```bash
-yarn add vue-plyr # or npm i vue-plyr
+npm i vue-plyr # or yarn add vue-plyr
 ```
 
 ### Module
