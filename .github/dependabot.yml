@@ -1,16 +1,5 @@
 version: 2
 updates:
-- package-ecosystem: composer
-  directory: "/"
-  schedule:
-    interval: weekly
-    day: saturday
-    time: "03:00"
-    timezone: Europe/Paris
-  open-pull-requests-limit: 10
-  labels:
-  - 3. to review
-  - dependencies
 - package-ecosystem: npm
   directory: "/"
   schedule:
@@ -20,5 +9,4 @@ updates:
     timezone: Europe/Paris
   open-pull-requests-limit: 10
   labels:
-  - 3. to review
   - dependencies

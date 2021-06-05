@@ -1,5 +1,5 @@
 # vue-plyr
-> v7.0.0 - [Changelog](https://github.com/redxtech/vue-plyr/blob/master/changelog.md)
+> v7.0.0 - [Changelog](https://github.com/skjnldsv/vue-plyr/blob/master/changelog.md)
 
 A vue component for the plyr video & audio player.
 
@@ -11,7 +11,7 @@ Supported player types: HTML5 video, HTML5 audio, YouTube, and Vimeo.
 
 ### Demo
 A demo of the components (equivalent to the html example include here) can be found at
-[redxtech.github.io/vue-plyr](https://redxtech.github.io/vue-plyr/).
+[skjnldsv.github.io/vue-plyr](https://skjnldsv.github.io/vue-plyr/).
 
 ## Installation
 ```bash
@@ -49,8 +49,8 @@ In the browser you can include it as you would any other package with unpkg, alo
 
 ```html
 <script type="text/javascript" src="https://unpkg.com/vue"></script>
-<script type="text/javascript" src="https://unpkg.com/vue-plyr"></script>
-<link rel="stylesheet" href="https://unpkg.com/vue-plyr/dist/vue-plyr.css" />
+<script type="text/javascript" src="https://unpkg.com/@skjnldsv/vue-plyr"></script>
+<link rel="stylesheet" href="https://unpkg.com/@skjnldsv/vue-plyr/dist/vue-plyr.css" />
 
 <!-- You will also need to install the component during app creation -->
 <script>
@@ -158,7 +158,7 @@ To access the player instance, you can use the `player` property from the `refs`
 ```
 
 ## Examples
-Examples of how to use this app can be found [here](https://github.com/redxtech/vue-plyr/tree/master/examples).
+Examples of how to use this app can be found [here](https://github.com/skjnldsv/vue-plyr/tree/master/examples).
 
 ## Events
 If you want to capture events from the plyr instance, you can do so by accessing the player instance through the `ref`
@@ -202,8 +202,8 @@ plugins folder containing only these three statements:
 
 ```js
 import Vue from 'vue'
-import VuePlyr from 'vue-plyr/dist/vue-plyr.ssr.js'
-import 'vue-plyr/dist/vue-plyr.css'
+import VuePlyr from '@skjnldsv/vue-plyr/dist/vue-plyr.ssr.js'
+import '@skjnldsv/vue-plyr/dist/vue-plyr.css'
 
 // The second argument is optional and sets the default config values for every player.
 Vue.use(VuePlyr, {
