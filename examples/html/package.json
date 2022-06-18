@@ -8,6 +8,6 @@
   },
   "dependencies": {
     "serve": "^11.3.2",
-    "vue-plyr": "^7.0.0-beta.1"
+    "@skjnldsv/vue-plyr": "^7.0.1-alpha.0"
   }
 }

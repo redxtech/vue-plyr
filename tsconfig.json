@@ -1,0 +1,14 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.json",
+  "include": ["./lib/**/*.ts", "./cypress/**/*.ts"],
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "target": "ESNext",
+    "module": "esnext",
+    "declaration": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "outDir": "./dist",
+  }
+}

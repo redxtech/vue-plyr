@@ -3,8 +3,8 @@
 		<h1>vue-plyr demo.</h1>
 		<h3>
 			sources can be found at
-			<a href="https://github.com/redxtech/vue-plyr/tree/master/examples">
-				github.com/redxtech/vue-plyr</a
+			<a href="https://github.com/skjnldsv/vue-plyr/tree/master/examples">
+				github.com/skjnldsv/vue-plyr</a
 			>.
 		</h3>
 		<div class="components">

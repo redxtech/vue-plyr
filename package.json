@@ -1,6 +1,6 @@
 {
   "name": "@skjnldsv/vue-plyr",
-  "version": "7.0.1-beta.0",
+  "version": "7.0.1-alpha.1",
   "description": "A vue component for the plyr video & audio player.",
   "license": "MIT",
   "author": {
@@ -10,52 +10,44 @@
   },
   "repository": "github:skjnldsv/vue-plyr",
   "scripts": {
-    "prebuild": "rm -rf dist/",
-    "build": "NODE_ENV=production rollup --c rollup.config.js",
-    "build:es": "NODE_ENV=production rollup --c rollup.config.js --format=es",
-    "build:es:watch": "NODE_ENV=production rollup --c rollup.config.js --format=es --watch",
-    "build:cjs": "NODE_ENV=production rollup --c rollup.config.js --format=cjs",
-    "build:cjs:watch": "NODE_ENV=production rollup --c rollup.config.js --format=cjs --watch",
-    "build:iife": "NODE_ENV=production rollup --c rollup.config.js --format=iife",
-    "build:iife:watch": "NODE_ENV=production rollup --c rollup.config.js --format=iife --watch",
-    "lint": "vue-cli-service lint -f pretty"
+    "build": "rollup --config rollup.config.js",
+    "dev": "echo 'No dev build available, production only' && npm run build",
+    "watch": "rollup --config rollup.config.js --watch",
+    "lint": "eslint --ext .js,.vue",
+    "lint:fix": "eslint --ext .js,.vue --fix"
   },
-  "main": "dist/vue-plyr.ssr.js",
-  "module": "dist/vue-plyr.esm.js",
-  "unpkg": "dist/vue-plyr.min.js",
-  "style": "dist/vue-plyr.css",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js"
+    }
+  },
   "files": [
-    "dist/*",
-    "src/**/*.vue"
+    "dist"
   ],
   "dependencies": {
     "plyr": "^3.6.8",
-    "vue": "^3.0.9"
+    "vue": "^3.2.37"
   },
   "devDependencies": {
-    "@babel/plugin-transform-runtime": "^7.14.3",
-    "@rollup/plugin-babel": "^5.3.0",
-    "@rollup/plugin-commonjs": "^21.0.0",
-    "@rollup/plugin-node-resolve": "^13.0.0",
-    "@rollup/plugin-replace": "^4.0.0",
-    "@vue/cli-plugin-babel": "^4.5.13",
-    "@vue/cli-plugin-eslint": "^5.0.0-alpha.8",
-    "@vue/cli-service": "^4.5.13",
-    "@vue/compiler-sfc": "^3.0.11",
-    "@vue/eslint-config-prettier": "^6.0.0",
-    "babel-eslint": "^10.1.0",
-    "core-js": "^3.14.0",
-    "eslint": "^7.28.0",
-    "eslint-formatter-pretty": "^4.0.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-vue": "^7.10.0",
-    "minimist": "^1.2.5",
-    "prettier": "^2.3.0",
-    "rollup": "^2.50.6",
-    "rollup-plugin-css-only": "^3.1.0",
-    "rollup-plugin-filesize": "^9.1.1",
-    "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-vue": "^6.0.0"
+    "@nextcloud/babel-config": "^1.0.0",
+    "@nextcloud/eslint-config": "^8.0.0",
+    "@nextcloud/stylelint-config": "^2.1.2",
+    "@rollup-extras/plugin-clean": "^1.2.3",
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@vue/tsconfig": "^0.1.3",
+    "jest": "^28.1.0",
+    "jest-environment-jsdom": "^28.1.1",
+    "rollup": "^2.75.6",
+    "rollup-plugin-inject-process-env": "^1.3.1",
+    "rollup-plugin-styles": "^4.0.0",
+    "rollup-plugin-vue": "^6.0.0",
+    "rollup-plugin-vue2": "^0.8.1",
+    "sass": "^1.52.3"
   },
   "keywords": [
     "vue-plyr",

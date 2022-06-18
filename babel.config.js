@@ -1,4 +1,3 @@
-module.exports = {
-	presets: ['@vue/cli-plugin-babel/preset'],
-	plugins: ['@babel/plugin-transform-runtime']
-}
+const babelConfig = require('@nextcloud/babel-config')
+
+module.exports = babelConfig

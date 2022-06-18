@@ -15,7 +15,7 @@ jobs:
       fail-fast: false
       matrix:
         node-version: [15]
-        examples: ["html", "nuxt", "shared", "vite", "vue-cli"]
+        examples: ["html", "nuxt", "vite", "vue-cli"]
 
     steps:
       - uses: actions/checkout@v2
